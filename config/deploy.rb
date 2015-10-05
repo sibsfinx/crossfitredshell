@@ -1,7 +1,7 @@
 lock '3.4.0'
 
 set :application, 'redshell'
-set :repo_url, 'git@example.com:me/redshell.git'
+set :repo_url, 'git@github.com:sibsfinx/crossfitredshell.git'
 
 set :branch, 'master'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -33,7 +33,7 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/upl
 # set :keep_releases, 5
 
 set :rbenv_type, :user
-set :rbenv_ruby, '2.2.1'
+set :rbenv_ruby, '2.2.2'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_roles, :all
 
