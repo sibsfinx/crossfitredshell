@@ -1,0 +1,18 @@
+defaults: &defaults
+  app:
+    title: Redshell
+
+development:
+  <<: *defaults
+
+
+test:
+  <<: *defaults
+
+
+production:
+  <<: *defaults
+
+
+staging:
+  <<: *defaults
