@@ -22,5 +22,28 @@ module Redshell
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.time_zone = 'Moscow'
+
+    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+    # config.before_configuration do
+    #   I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+    #   I18n.locale = :ru
+    #   I18n.default_locale = :ru
+    #   config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+    #   config.i18n.locale = :ru
+    #   # bypasses rails bug with i18n in production\
+    #   I18n.reload!
+    #   config.i18n.reload!
+    # end
+
+    config.i18n.locale = :ru
+    config.i18n.default_locale = :ru
+
+    config.assets.debug = false
+
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
   end
 end
