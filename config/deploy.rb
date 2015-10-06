@@ -8,6 +8,8 @@ set :branch, 'master'
 
 set :deploy_to, '/home/wwwredshell/redshell'
 
+set :bower_bin, '/home/wwwredshell/.nvm/versions/node/v0.12.7/bin/bower'
+
 # Default value for :format is :pretty
 # set :format, :pretty
 

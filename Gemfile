@@ -152,6 +152,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano3-puma'
+  gem 'capistrano-bower'
   gem 'capistrano-rails-console'
   gem "capistrano-db-tasks", require: false
 end
