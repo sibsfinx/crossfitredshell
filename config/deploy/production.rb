@@ -8,7 +8,7 @@
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
 
-server '46.101.207.229', user: 'wwwredshell', roles: %w{app db web}
+server '46.101.178.196', user: 'wwwredshell', roles: %w{app db web}
 
 set :disallow_pushing, false
 
