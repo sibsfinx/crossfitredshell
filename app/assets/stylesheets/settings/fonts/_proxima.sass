@@ -1,0 +1,12 @@
+$font-proxima-variants: (200 light, 400 regular, 600 bold)
+$font-proxima: 'Proxima Nova'
+
+@each $f in $font-proxima-variants
+  @font-face
+    font-family: $font-proxima
+    src: asset-url('proxima_nova_#{nth($f,2)}-webfont.eot')
+    src: asset-url('proxima_nova_#{nth($f,2)}-webfont.eot?#iefix') format("embedded-opentype"), asset-url('proxima_nova_#{nth($f,2)}-webfont.woff') format("woff"), asset-url('proxima_nova_#{nth($f,2)}-webfont.ttf') format("truetype")
+    //, asset-url('proxima_nova_#{nth($f,2)}-webfont.svg#helveticaneuecyr#{nth($f,2)}-webfont') format("svg")
+    font-weight: nth($f,1)
+    font-style: normal
+

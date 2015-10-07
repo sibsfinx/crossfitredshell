@@ -1,0 +1,19 @@
+$font-incised: 'Incised'
+$font-incised-variants: (100 light, 400 regular, 500 medium, 600 bold, 700 extrabold, 900 black)
+//$font-incised-variants: (100 light, 600 bold, 700 extrabold, 900 black)
+$font-incised-path: 'incised-'
+
+@each $f in $font-incised-variants
+  @font-face
+    font-family: $font-incised
+    src: asset-url('#{$font-incised-path}#{nth($f,2)}.eot')
+    src: asset-url('#{$font-incised-path}#{nth($f,2)}.eot?#iefix') format("embedded-opentype"), asset-url('#{$font-incised-path}#{nth($f,2)}.woff') format("woff"), asset-url('#{$font-incised-path}#{nth($f,2)}.ttf') format("truetype")
+    //src: asset-url('#{$font-incised-path}#{nth($f,2)}.eot?#iefix') format("embedded-opentype"), asset-url('#{$font-incised-path}#{nth($f,2)}.woff2') format("woff2"), asset-url('#{$font-incised-path}#{nth($f,2)}.woff') format("woff"), asset-url('#{$font-incised-path}#{nth($f,2)}.ttf') format("truetype")
+    font-weight: nth($f,1)
+    font-style: normal
+  .text-incised-#{nth($f,2)}
+    font:
+      family: $font-incised
+      weight: nth($f,1)
+
+
