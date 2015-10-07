@@ -1,0 +1,38 @@
+$welcome-logo-width: 120px
+$welcome-logo-height: 151px
+$welcome-logo-width-xs: $welcome-logo-width/1.5
+$welcome-logo-height-xs: $welcome-logo-height/1.5
+
+.welcome-container
+  padding:
+    top: $grid-gutter-width/2
+    bottom: $grid-gutter-width/2
+  background:
+    repeat: none
+    size: cover
+    position: center top
+    image: url('cover.jpg')
+  min-height: 100vh
+  @media screen and (max-width: $screen-sm-max)
+    background-position: 30% top
+
+.welcome-logo
+  display: block
+  background:
+    repeat: no-repeat
+    size: auto
+    position: center
+    image: url('logo-crossfit-redshell-white.svg')
+  width: $welcome-logo-width
+  height: $welcome-logo-height
+  @media screen and (max-width: $screen-sm-max)
+    width: $welcome-logo-width-xs
+    height: $welcome-logo-height-xs
+
+
+.welcome-content
+  padding-top: $grid-gutter-width
+  color: #fff
+  hr
+    border-top-color: #fff
+    border-top-color: rgba(#fff, 0.2)

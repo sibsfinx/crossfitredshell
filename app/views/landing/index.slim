@@ -1,41 +1,62 @@
-.container
-  h1.text-incised-extrabold Crossfit Redshell
-
-  h2
-    | 1 ноября в 9:00
-    br
-  h4
-    | Открытие аффилированного клуба кроссфита «Crossfit Red Shell Чебоксары», одного из крупнейших в России
-  .row
-    .col-sm-4
-      h3
-        | 1400 м
-        sup 2
-      | площади
-    .col-sm-4
-      h3
-        | 7
-      | спортивных направлений
-    .col-sm-4
-      h3
-        | 100 тонн
-      | свободных весов
-  hr
-  h4
-    | В честь открытия состоятся соревнования по кроссфиту
-  p
-    | Призовой фонд —
-    strong
-      | 100 000 рублей
-  p
-    = link_to 'http://vk.com/redshelltotal', target: :blank do
-      | Подробности и условия участия
-  hr
-  p
-    | Мы в соцсетях:
-  p
-    = link_to 'http://vk.com/crossfitrs', target: :blank do
-      | Вконтакте
-    | &nbsp;&nbsp;&nbsp;
-    = link_to 'https://instagram.com/crossfitredshell/', target: :blank do
-      | Instagram
+.welcome-container
+  .container
+    .row
+      .col-md-2
+        .welcome-logo
+      .col-md-10
+        .welcome-content
+          .content-block
+            p.text-size-larger
+              strong
+                | 1 ноября в 9:00
+            p.text-size-large
+              | открытие аффилированного клуба кроссфита
+          .content-block-lg
+            p.text-size-largest.text-accented-black
+              | Crossfit
+              br
+              | Red Shell
+              br
+              | Чебоксары
+            p.text-size-large
+              | &mdash;&nbsp;
+              | одного из крупнейших в России
+          .row
+            .col-sm-4
+              .content-block
+                .text-size-large.text-accented-black
+                  | 1400 м
+                  sup 2
+                | площади
+            .col-sm-4
+              .content-block
+                .text-size-large.text-accented-black
+                  | 7
+                | спортивных направлений
+            .col-sm-4
+              .content-block
+                .text-size-large.text-accented-black
+                  | 100 тонн
+                | свободных весов
+          hr.content-block
+          .content-block-lg
+            .text-size-large.content-block
+              | В честь открытия состоятся
+              br
+              | соревнования по кроссфиту
+              br
+              | с призовой фондом в
+              | &nbsp;
+              strong
+                | 100 000 рублей
+            = link_to 'http://vk.com/redshelltotal', target: :blank, class: 'btn btn-lg btn-white--outline' do
+              | Подробности и условия участия
+          hr.content-block
+          p
+            | Мы в соцсетях:
+          p
+            = link_to 'http://vk.com/crossfitrs', target: :blank, class: 'btn btn-white--outline' do
+              | Вконтакте
+            | &nbsp;&nbsp;&nbsp;
+            = link_to 'https://instagram.com/crossfitredshell/', target: :blank, class: 'btn btn-white--outline' do
+              | Instagram
