@@ -1,6 +1,6 @@
 defaults: &defaults
   app:
-    title: Redshell
+    title: Crossfit Red Shell Чебоксары — аффилированный клуб кроссфита
 
 development:
   <<: *defaults
