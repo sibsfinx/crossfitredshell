@@ -10,10 +10,10 @@
               strong
                 | 1 ноября в 9:00
             p.text-size-large
-              | открытие аффилированного клуба кроссфита
+              | открытие аффилированного клуба КроссФит
           .content-block-lg
-            p.text-size-largest.text-accented-black
-              | Crossfit
+            h1.text-size-largest.text-accented-black
+              | CrossFit
               br
               | Red Shell
               br
@@ -43,9 +43,9 @@
             .text-size-large.content-block
               | В честь открытия состоятся
               br
-              | соревнования по кроссфиту
+              | соревнования по КроссФит
               br
-              | с призовой фондом в
+              | с призовым фондом в
               | &nbsp;
               strong
                 | 100 000 рублей
@@ -61,3 +61,14 @@
               | &nbsp;&nbsp;&nbsp;
               = link_to 'https://instagram.com/crossfitredshell/', target: :blank, class: 'btn btn-white--outline' do
                 | Instagram
+.welcome-contacts
+  .container
+    .row
+      .col-sm-8.col-sm-offset-2
+        .text-size-large
+          | Чебоксары,
+          br
+          | Текстильщиков, 8 корпус 16
+.welcome-map
+  = render 'map'
+

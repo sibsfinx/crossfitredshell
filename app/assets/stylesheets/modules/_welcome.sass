@@ -12,6 +12,7 @@ $welcome-logo-height-xs: $welcome-logo-height/1.5
     size: cover
     position: center top
     image: asset-url('cover.jpg')
+  min-height: 600px
   min-height: 100vh
   @media screen and (max-width: $screen-sm-max)
     background-position: 30% top
@@ -33,6 +34,24 @@ $welcome-logo-height-xs: $welcome-logo-height/1.5
 .welcome-content
   padding-top: $grid-gutter-width
   color: #fff
+  @each $t in p, h1, h2, h3, h4, h5, h5
+    #{$t}
+      color: #fff
   hr
     border-top-color: #fff
     border-top-color: rgba(#fff, 0.2)
+
+.welcome-map
+  height: 500px
+
+.welcome-contacts
+  padding:
+    top: $grid-gutter-width*3
+    bottom: $grid-gutter-width*4
+  background:
+    repeat: no-repeat
+    size: auto
+    position: center top
+    image: asset-url('hue-cover.jpg')
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1)
+
