@@ -14,7 +14,11 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass-official": "bootstrap-sass-official#~3.3.5"
+    "FitText.js": "~1.2.0",
+    "bootstrap-sass-official": "bootstrap-sass-official#~3.3.5",
+    "jquery": "~2.1.4",
+    "jquery.role": "git://github.com/kossnocorp/role",
+    "webfontloader": "git@github.com:typekit/webfontloader.git#~1.6.6"
   },
   "devDependencies": {
     "compass-mixins": "~1.0.2"
