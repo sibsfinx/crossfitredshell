@@ -72,6 +72,18 @@
           hr.content-block
           .content-block-lg
             .text-size-large.content-block
+              | Заказать абонемент
+              br
+              | можно по телефону и email
+            = link_to "tel:#{Settings.app.phone_tel}", class: 'btn btn-white--outline' do
+              = Settings.app.phone
+            | &nbsp;&nbsp;&nbsp;
+            = mail_to "#{Settings.app.admin_email}?subject=Заказ абонемента в CrossFit RedShell", class: 'btn btn-white--outline' do
+              = Settings.app.admin_email
+
+          hr.content-block
+          .content-block-lg
+            .text-size-large.content-block
               | В честь открытия состоятся
               br
               | соревнования по КроссФит

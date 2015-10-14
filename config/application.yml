@@ -3,6 +3,9 @@ defaults: &defaults
     title: Crossfit Red Shell Чебоксары — аффилированный клуб кроссфита
     meta_title: Кроссфит CrossFit Red Shell
     meta_description: Кроссфит в Чебоксарах. Аффилированный клуб. Просторный зал, сертифицированные тренера, профессиональное оборудование. Тренировки, соревнования, программы.
+    phone: (8352) 38-47-17
+    phone_tel: +78352384717
+    admin_email: admin@crossfitredshell.com
 
 development:
   <<: *defaults
