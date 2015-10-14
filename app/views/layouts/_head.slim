@@ -1,6 +1,8 @@
 meta name="viewport"  content="width=device-width, initial-scale=1, maximum-scale=1"
 title= content_for?(:title) ? yield(:title) : Settings.app.title
-/%meta{:content => content_for?(:description) ? yield(:description) : Settings.app.title, :name => "description"}
+//meta content="#{content_for?(:description) ? yield(:description) : Settings.app.title}" name="description"
+meta name="title" content="#{Settings.app.meta_title.presence}"
+meta name="description" content="#{Settings.app.meta_description.presence}"
 = stylesheet_link_tag :application, :media => "all", 'data-turbolinks-track' => true
 = javascript_include_tag :application, 'data-turbolinks-track' => true
 = csrf_meta_tags
