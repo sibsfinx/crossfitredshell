@@ -3,6 +3,17 @@ title= content_for?(:title) ? yield(:title) : Settings.app.title
 //meta content="#{content_for?(:description) ? yield(:description) : Settings.app.title}" name="description"
 meta name="title" content="#{Settings.app.meta_title.presence}"
 meta name="description" content="#{Settings.app.meta_description.presence}"
+
+meta property="og:image" content="http://crossfitredshell.com#{image_path('logo_caption_bullet.png')}"
+meta content="#{Settings.app.title}" property="og:title"
+meta content="article" property="og:type"
+meta content="http://crossfitredshell.com#{image_path('logo.png')}" property="og:image"
+meta content="http://crossfitredshell.com/" itemprop="url"
+meta content="#{Settings.app.meta_title}" itemprop="name"
+meta content="#{Settings.app.meta_description}" itemprop="description"
+meta content="http://crossfitredshell.com#{image_path('logo.png')}" itemprop="image"
+meta content="http://crossfitredshell.com#{image_path('logo.png')}" itemprop="logo"
+
 = render 'layouts/favicon'
 = stylesheet_link_tag :application, :media => "all", 'data-turbolinks-track' => true
 = javascript_include_tag :application, 'data-turbolinks-track' => true
