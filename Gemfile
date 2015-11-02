@@ -12,7 +12,7 @@ gem 'squeel'
 gem 'settingslogic'
 
 # Authentication & Authorisation
-# gem 'devise'
+gem 'devise'
 # gem 'switch_user'
 # gem "pundit"
 
@@ -33,7 +33,7 @@ gem 'slim-rails'
 gem 'haml-rails'
 
 # Forms
-# gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
+gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 # gem 'cocoon'
 
 # Presenters Decorators
@@ -73,7 +73,7 @@ gem 'carrierwave'
 
 # Admin
 # gem 'devise'
-# gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', github: 'activeadmin'
 
 # Queue
 # gem 'sidekiq'

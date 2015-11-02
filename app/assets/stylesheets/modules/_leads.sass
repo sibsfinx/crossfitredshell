@@ -1,0 +1,64 @@
+.landing-teaser--form-container
+  background:
+    repeat: none
+    size: cover
+    position: center top
+    image: asset-url('form-cover.jpg')
+
+.landing-teaser--form-container-bg
+  background-color: rgba(#000, 0.7)
+
+.landing-teaser--form-success,
+.landing-teaser--form-error
+  padding: 20px
+  border: 1px solid rgba(#fff, 0.2)
+  border-radius: 4px
+  font:
+    size: 18px
+    weight: 700
+  color: #fff
+
+.landing-teaser--form-success
+  background-color: $brand-success
+
+.landing-teaser--form-error
+  background-color: $brand-danger
+
+.landing-teaser--form-image
+  max-width: 100%
+
+.landing-teaser--form-control
+  border-radius: 0
+  padding:
+    left: 0
+    right: 0
+  transition: border 0.2s ease, color 0.2s ease
+  &, &:focus, &:hover
+    background: none
+    color: #fff
+    outline: none
+    box-shadow: none
+    border: 1px solid transparent
+    border-bottom: 1px solid rgba(#fff, 0.5)
+  &:focus,
+  &:hover
+    border-bottom: 1px solid $c-red
+    &::placeholder
+      color: rgba(#fff, 0.7)
+  &::placeholder
+    color: rgba(#fff, 0.5)
+
+.landing-teaser--group
+  @extend .input-group
+
+.landing-teaser--group-addon
+  @extend .input-group-addon
+  background: none
+  border: none
+  color: #fff
+  padding-left: 0
+
+.landing-teaser--form-control
+  & + .landing-teaser--group-addon
+    padding-left: 10px
+

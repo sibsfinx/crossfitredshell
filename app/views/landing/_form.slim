@@ -1,0 +1,34 @@
+div role='landing-teaser--form-block'
+  .landing-teaser--form-error.hide role='landing-teaser--form-error'
+    | Что-то пошло не так…
+  .landing-teaser--form-success.hide role='landing-teaser--form-success'
+    | Спасибо! Мы перезвоним вам
+  div role='landing-teaser--form'
+    h2.text-center.content-block
+      | Оформить заявку на абонемент
+    / p
+      = lead_form.description
+    .row
+      .col-md-6.col-md-offset-3
+        = simple_form_for(lead, remote: true, method: :post, :html => { class: 'landing-teaser--form', role: 'landing-teaser--form-element'}) do |f|
+          = f.error_notification
+          .content-block
+            - Lead::FORM_FIELDS.each do |field|
+              .form-group
+                - if field.to_s != 'cards_quantity'
+                  = f.input field.to_sym, label: false, input_html: {class: 'landing-teaser--form-control'}
+                - else
+                  .landing-teaser--group
+                    .landing-teaser--group-addon
+                      = t('activerecord.attributes.lead.cards_quantity')
+                    = f.input field.to_sym, label: false, input_html: {class: 'landing-teaser--form-control text-center'}
+          .form-group
+            = button_tag type: 'submit', class: 'btn btn-lg btn-block btn-red',
+                role: 'landing-teaser--form-submit-btn',
+                :data => { 'disable-with' => 'Отправляем…' } do
+              | Отправить
+          small.help-block-sm
+            | Мы не будем присылать вам спам, честное слово!
+
+
+

@@ -7,10 +7,36 @@ defaults: &defaults
     phone_tel: +78352384717
     admin_email: admin@crossfitredshell.com
 
+    asset_host: http://crossfitredshell.com
+
+    default_url_options: &default_url_options
+      host: crossfitredshell.com
+      port: 80
+
+  mailer_defaults: &mailer_defaults
+    from: 'mailer@crossfitredshell.com'
+    host: crossfitredshell.com
+
+  action_mailer:
+    default_url_options:
+      <<: *default_url_options
+    raise_delivery_errors: false
+    service: smtp
+    host: localhost:3000
+    sendmail:
+      location:  '/usr/sbin/sendmail'
+      arguments: '-i -t'
+    smtp:
+      address: 'smtp.yandex.ru'
+      domain:  'yandex.ru'
+      port:    25
+      email:   'mailer@crossfitredshell.com'
+      password: 'RedshellMailer3000'
+      authentication: plain
+
+
 development:
   <<: *defaults
-
-
 test:
   <<: *defaults
 
