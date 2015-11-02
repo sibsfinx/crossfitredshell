@@ -3,7 +3,8 @@ lock '3.4.0'
 set :application, 'redshell'
 set :repo_url, 'git@github.com:sibsfinx/crossfitredshell.git'
 
-set :branch, 'master'
+set :branch, ENV['BRANCH'] || 'master'
+
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 set :deploy_to, '/home/wwwredshell/redshell'
