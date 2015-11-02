@@ -10,8 +10,8 @@ defaults: &defaults
     asset_host: http://crossfitredshell.com
 
     default_url_options: &default_url_options
-      host: crossfitredshell.com
-      port: 80
+      host: localhost
+      port: 3000
 
   mailer_defaults: &mailer_defaults
     from: 'mailer@crossfitredshell.com'
@@ -22,18 +22,15 @@ defaults: &defaults
       <<: *default_url_options
     raise_delivery_errors: false
     service: smtp
-    host: localhost:3000
-    sendmail:
-      location:  '/usr/sbin/sendmail'
-      arguments: '-i -t'
-    smtp:
+    smtp_settings:
       address: 'smtp.yandex.ru'
       domain:  'yandex.ru'
-      port:    25
+      port:    465
       email:   'mailer@crossfitredshell.com'
       password: 'RedshellMailer3000'
       authentication: plain
-
+      enable_starttls_auto: true
+      tls: true
 
 development:
   <<: *defaults
