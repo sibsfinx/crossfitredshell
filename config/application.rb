@@ -25,7 +25,7 @@ module Redshell
 
     config.time_zone = 'Moscow'
 
-    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.delivery_method = :sendmail
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.before_configuration do
