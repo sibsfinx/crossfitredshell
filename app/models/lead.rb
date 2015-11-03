@@ -1,7 +1,7 @@
 class Lead < ActiveRecord::Base
   #FORM_FIELDS = [:name, :email, :phone, :cards_quantity]
   FORM_FIELDS = [:name, :phone, :cards_quantity]
-  MANAGER_EMAIL = "crossfitredshellmailer@gmail.com"
+  MANAGER_EMAIL = "crossfitredshell@yandex.ru"
 
   validates :phone, :name, presence: true
 
