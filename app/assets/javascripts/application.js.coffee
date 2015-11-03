@@ -15,4 +15,14 @@ $ ->
     minFontSize: ($(@).data('min-font-size') || 0) + 'px'
     maxFontSize: ($(@).data('max-font-size') || 200) + 'px'
 
+  $('@scroll-link').on 'click', (e) ->
+    e.preventDefault()
+    target = $(@).data('target')
+    if target?.length > 0
+      top = $(target).offset().top
+      $('body').animate({
+        scrollTop: top
+      }, (300/1600*top))
+
+
 

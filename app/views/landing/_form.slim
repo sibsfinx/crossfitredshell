@@ -1,62 +1,29 @@
-.content-block-lg role='landing-teaser--form-block'
-  .landing-teaser--form-error.hide role='landing-teaser--form-error'
-    | Что-то пошло не так…
-  .landing-teaser--form-success.hide role='landing-teaser--form-success'
-    | Спасибо! Мы перезвоним вам
-  div role='landing-teaser--form'
-    .content-block-lg
-      p
-        | В честь открытия,
-        strong
-          |  8 ноября с 12:00 до 20:00
-        |  успейте приобрести абонемент на 12&nbsp;занятий по праздничным ценам:
-      ul
-        li
-          strong
-            | 1500 рублей
-          |  для посещения занятий до 15:00;
-        li
-          strong
-            | 2500 рублей
-          |  для посещения в любое время.
-      p
-        | Абонемент действует 2 месяца и даёт право доступа занятия любых направлений по вашему выбору.
-      p
-        | Количество абонементов ограничено, не упустите шанс стать лучше!
-    hr.content-block-lg
-    .text-size-large.content-block.text-center
-      | Оформить заявку на абонемент
+- if subject.present? && subject == :card
+  - fields = Lead::FORM_FIELDS
+- else
+  - fields = Lead::TRIAL_FORM_FIELDS
 
-    .row
-      .col-md-6.col-md-offset-3
-        = simple_form_for(lead, remote: true, method: :post, :html => { class: 'landing-teaser--form', role: 'landing-teaser--form-element'}) do |f|
-          = f.error_notification
-          .content-block
-            - Lead::FORM_FIELDS.each do |field|
-              .form-group
-                - if field.to_s != 'cards_quantity'
-                  = f.input field.to_sym, label: false, input_html: {class: 'landing-teaser--form-control'}
-                - else
-                  .landing-teaser--group
-                    .landing-teaser--group-addon
-                      = t('activerecord.attributes.lead.cards_quantity')
-                    = f.input field.to_sym, label: false, input_html: {class: 'landing-teaser--form-control text-center'}
+.row
+  .col-md-6.col-md-offset-3
+    = simple_form_for(lead, remote: true, method: :post, :html => { class: 'landing-teaser--form', role: 'landing-teaser--form-element'}) do |f|
+      = f.error_notification
+      - if subject.present?
+        = f.input :subject, as: :hidden, input_html: {value: subject}
+      .content-block
+        - fields.each do |field|
           .form-group
-            = button_tag type: 'submit', class: 'btn btn-lg btn-block btn-red',
-                role: 'landing-teaser--form-submit-btn',
-                :data => { 'disable-with' => 'Отправляем…' } do
-              | Отправить
-          small.help-block-sm
-            | Мы не будем присылать вам спам, честное слово!
-hr.content-block-lg
-.text-center
-  .content-block
-    | Есть вопросы? Напишите на емэйл или позвоните нам
-  = link_to "tel:#{Settings.app.phone_tel}", class: 'btn btn-white--outline' do
-    = Settings.app.phone
-  | &nbsp;&nbsp;&nbsp;
-  = mail_to "#{Settings.app.admin_email}?subject=Заказ абонемента в CrossFit RedShell", class: 'btn btn-white--outline' do
-    = Settings.app.admin_email
-
-
+            - if field.to_s != 'cards_quantity'
+              = f.input field.to_sym, label: false, input_html: {class: 'landing-teaser--form-control'}
+            - else
+              .landing-teaser--group
+                .landing-teaser--group-addon
+                  = t('activerecord.attributes.lead.cards_quantity')
+                = f.input field.to_sym, label: false, input_html: {class: 'landing-teaser--form-control text-center'}
+      .form-group
+        = button_tag type: 'submit', class: 'btn btn-lg btn-block btn-red',
+            role: 'landing-teaser--form-submit-btn',
+            :data => { 'disable-with' => 'Отправляем…' } do
+          | Отправить
+      small.help-block-sm
+        | Мы не будем присылать вам спам, честное слово!
 

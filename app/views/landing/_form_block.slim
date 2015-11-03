@@ -1,0 +1,43 @@
+.content-block-lg role='landing-teaser--form-block'
+  .landing-teaser--form-error.hide role='landing-teaser--form-error'
+    | Что-то пошло не так…
+  .landing-teaser--form-success.hide role='landing-teaser--form-success'
+    | Спасибо! Мы перезвоним вам
+  div role='landing-teaser--form'
+    .content-block-lg
+      p
+        | В честь открытия,
+        strong
+          |  8 ноября с 12:00 до 20:00
+        |  успейте приобрести абонемент на 12&nbsp;занятий по праздничным ценам:
+      ul
+        li
+          strong
+            | 1500 рублей
+          |  для посещения занятий до 15:00;
+        li
+          strong
+            | 2500 рублей
+          |  для посещения в любое время.
+      p
+        | Абонемент действует 2 месяца и даёт право доступа занятия любых направлений по вашему выбору.
+      p
+        | Количество абонементов ограничено, не упустите шанс стать лучше!
+    hr.content-block-lg
+    div role="buy-card-form"
+      .text-size-large.content-block.text-center
+        | Оформить заявку на абонемент
+        = render 'landing/form', lead: lead, subject: subject
+
+hr.content-block-lg
+.text-center
+  .content-block
+    | Есть вопросы? Напишите на емэйл или позвоните нам
+  = link_to "tel:#{Settings.app.phone_tel}", class: 'btn btn-white--outline' do
+    = Settings.app.phone
+  | &nbsp;&nbsp;&nbsp;
+  = mail_to "#{Settings.app.admin_email}?subject=Заказ абонемента в CrossFit RedShell", class: 'btn btn-white--outline' do
+    = Settings.app.admin_email
+
+
+

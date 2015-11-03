@@ -11,6 +11,16 @@
     color: $c-red
     background-color: #fff
 
+.btn-red--outline
+  border: 1px solid $c-red
+  +transition(color 0.2s ease, background 0.2s ease)
+  color: $c-red
+  +antialiased
+  &:hover, &:focus
+    color: #fff
+    background-color: $c-red
+
+
 .btn-red
   +transition(color 0.2s ease, background 0.2s ease)
   color: #fff

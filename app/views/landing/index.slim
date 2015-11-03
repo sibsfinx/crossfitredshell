@@ -3,9 +3,12 @@
     .row
       .col-md-2
         .welcome-logo
-      .col-md-8
-        .welcome-content
-          = render 'landing/intro'
+      .col-md-10
+        = render 'landing/navbar'
+        .row
+          .col-md-10
+            .welcome-content
+              = render 'landing/intro'
 .welcome-contacts.welcome-content
   .container
     .row
@@ -22,12 +25,18 @@
     .container
       .row
         .col-sm-8.col-sm-offset-2
-          = render 'landing/form', lead: @new_lead
+          = render 'landing/form_block', lead: @new_lead, subject: :card
 .welcome-content-block
   .container
     .row
       .col-sm-8.col-sm-offset-2
         = render 'landing/sections'
+.landing-teaser--form-container-trial
+  .welcome-contacts.welcome-content.landing-teaser--form-container-bg
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          = render 'landing/trial_form_block', lead: @new_lead, subject: :trial
 .welcome-contacts.welcome-content
   .container
     .row
@@ -48,7 +57,7 @@
   .container
     .row
       .col-sm-8.col-sm-offset-2
-        .content-block-lg
+        .content-block-lg role="contacts-block"
         .text-size-large.content-block-lg
           | Чебоксары,
           br

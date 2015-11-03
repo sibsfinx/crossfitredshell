@@ -7,3 +7,7 @@ ru:
         phone: Номер телефона
         name: Имя
         cards_quantity: Количество абонементов
+        subject: Тема
+        subjects:
+          card: Абонементы
+          trial: Пробное занятие
