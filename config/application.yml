@@ -12,36 +12,60 @@ defaults: &defaults
     asset_host: http://crossfitredshell.com
 
     default_url_options: &default_url_options
-      host: localhost
-      port: 3000
+      host: HOSTNAME
+      port: 80
 
   mailer_defaults: &mailer_defaults
     from: 'mailer@crossfitredshell.com'
     host: crossfitredshell.com
 
-  action_mailer:
+    default_url_options: &default_url_options
+      host: HOSTNAME
+      port: 80
+
+  action_mailer: &action_mailer
+    raise_delivery_errors: false
     default_url_options:
       <<: *default_url_options
-    raise_delivery_errors: false
-    service: smtp
-    smtp_settings:
-      address: 'smtp.yandex.ru'
-      domain:  '127.0.0.1:3000'
-      port:    587
-      email:   'mailer@crossfitredshell.com'
-      password: 'RedshellMailer3000'
-      authentication: plain
-      enable_starttls_auto: true
 
 development:
   <<: *defaults
+  action_mailer:
+    <<: *action_mailer
+    delivery_method: :smtp
+    smtp_settings:
+      address: localhost
+      port: 1025   # mailcatcher
+    raise_delivery_errors: true
+
 test:
   <<: *defaults
+  capybara:
+    port: 57500
 
+  mailer_defaults:
+    <<: *mailer_defaults
+
+  action_mailer:
+    <<: *action_mailer
+    delivery_method: :test
 
 production:
   <<: *defaults
-
+  mailer_defaults:
+    <<: *mailer_defaults
+  action_mailer: &action_mailer
+    raise_delivery_errors: false
+    default_url_options:
+      <<: *default_url_options
+    smtp_settings:
+      address: "localhost"
+      port: 25
+      domain: crossfitredshell.com
+      enable_starttls_auto: false
 
 staging:
   <<: *defaults
+  mailer_defaults:
+    <<: *mailer_defaults
+
