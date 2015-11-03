@@ -26,13 +26,12 @@ defaults: &defaults
     service: smtp
     smtp_settings:
       address: 'smtp.yandex.ru'
-      domain:  'yandex.ru'
-      port:    465
+      domain:  '127.0.0.1:3000'
+      port:    587
       email:   'mailer@crossfitredshell.com'
       password: 'RedshellMailer3000'
       authentication: plain
       enable_starttls_auto: true
-      tls: true
 
 development:
   <<: *defaults
