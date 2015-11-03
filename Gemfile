@@ -156,6 +156,7 @@ group :development do
   gem 'capistrano-bower'
   gem 'capistrano-rails-console'
   gem "capistrano-db-tasks", require: false
+  gem 'capistrano-rails-tail-log'
 end
 
 gem 'rspec-rails', :group => [:development, :test]
