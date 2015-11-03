@@ -1,0 +1,27 @@
+- sections = YAML.load_file(Rails.root.join('app', 'data', 'sections.yml')).symbolize_keys!
+
+.content-block-lg
+- sections[:intro].map{|i| i.symbolize_keys! }.each do |item|
+  .content-block-lg
+    p.text-size-larger.text-accented-black role="fit-text-limited" data-max-font-size="50"
+      = item[:title]
+    p
+      = item[:text]
+  hr.content-block-lg
+
+- sections[:list].map{|i| i.symbolize_keys! }.each do |item|
+  .content-block-lg
+    p.text-size-large
+      = item[:title]
+    p
+      = item[:text]
+  hr.content-block-lg
+
+- sections[:description].map{|i| i.symbolize_keys! }.each do |item|
+  .content-block-lg
+    p.text-size-large
+      = item[:title]
+    p
+      = item[:text]
+
+

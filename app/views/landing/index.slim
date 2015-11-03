@@ -23,6 +23,11 @@
       .row
         .col-sm-8.col-sm-offset-2
           = render 'landing/form', lead: @new_lead
+.welcome-content-block
+  .container
+    .row
+      .col-sm-8.col-sm-offset-2
+        = render 'landing/sections'
 .welcome-contacts.welcome-content
   .container
     .row
@@ -48,6 +53,13 @@
           | Чебоксары,
           br
           | Текстильщиков, 8 корпус 16
+
 .welcome-map
   = render 'map'
+
+.welcome-contacts.welcome-content
+  .container
+    .row
+      .content-block
+        = render 'landing/partners'
 
