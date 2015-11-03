@@ -25,6 +25,8 @@ module Redshell
 
     config.time_zone = 'Moscow'
 
+    config.action_mailer.delivery_method = :sendmail
+
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.before_configuration do
     #   I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
@@ -44,6 +46,7 @@ module Redshell
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
 
   end
 end

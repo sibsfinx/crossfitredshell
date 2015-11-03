@@ -1,0 +1,6 @@
+@each $c in 'red-lighter' lighten($c-red-light, 15%) $c-red-light, 'red-light' $c-red-light $c-red
+  .link-#{nth($c,1)}
+    &, &:focus
+      color: nth($c,2)
+    &:hover
+      color: nth($c,3)

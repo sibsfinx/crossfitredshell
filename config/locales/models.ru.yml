@@ -1,0 +1,9 @@
+ru:
+  activerecord:
+    models:
+      lead: Заявка
+    attributes:
+      lead:
+        phone: Номер телефона
+        name: Имя
+        cards_quantity: Количество абонементов

@@ -11,4 +11,13 @@
     color: $c-red
     background-color: #fff
 
+.btn-red
+  +transition(color 0.2s ease, background 0.2s ease)
+  color: #fff
+  +antialiased
+  background-color: $c-red
+  &:hover, &:focus
+    color: #fff
+    background-color: $c-red-dark
+
 

@@ -5,115 +5,46 @@
         .welcome-logo
       .col-md-8
         .welcome-content
-          .content-block
-            p.text-size-larger
-              strong
-                | 8 ноября в 9:00
-            p.text-size-large
-              | открывается первый в Чувашии аффилированный центр кроссфита
-          .content-block-lg
-            h1.text-size-largest.text-accented-black role="fit-text"
-              | CrossFit
-              br
-              | Red Shell
-              br
-              | Чебоксары
-            p.text-size-large.content-block
-              | &mdash;&nbsp;
-              | одного из крупнейших в России
-            p
-              | Просторный зал, сертифицированные тренера, профессиональное оборудование. Тренировки, соревнования, программы для любого уровня подготовки, пола и возраста!
-          .content-block
-            .row
-              .col-sm-4
-                .text-size-large.text-accented-black
-                  | 1400 м
-                  sup 2
-                | площади
-              .col-sm-8
-                p.text-size-small
-                  p
-                    | Профессиональные кардио- и силовые тренажеры
-                  p
-                    | Просторные раздевалки с душевыми
-                  p
-                    | Кафе здорового питания и спортбар
-          hr.content-block
-
-          .content-block
-            .row
-              .col-sm-4
-                .text-size-large.text-accented-black
-                  | 10
-                | спортивных направлений
-              .col-sm-8
-                p
-                  | CrossFit
-                p
-                  | кардио
-                p
-                  | стретчинг
-                p
-                  | тяжелая атлетика, пауэрлифтинг и силовой экстрим
-                p
-                  | специальные тренировки для женщин, детей и пожилых людей
-          hr.content-block
-
-          .content-block
-            .row
-              .col-sm-4
-                .text-size-large.text-accented-black
-                  | 100 тонн
-                | свободных весов
-              .col-sm-8
-                p.text-size-small
-                  p
-                    | профессиональное стандартизированное силовое оборудование
-          hr.content-block
-          .content-block-lg
-            .text-size-large.content-block
-              | Заказать абонемент
-              br
-              | можно по телефону и email
-            = link_to "tel:#{Settings.app.phone_tel}", class: 'btn btn-white--outline' do
-              = Settings.app.phone
-            | &nbsp;&nbsp;&nbsp;
-            = mail_to "#{Settings.app.admin_email}?subject=Заказ абонемента в CrossFit RedShell", class: 'btn btn-white--outline' do
-              = Settings.app.admin_email
-
-          hr.content-block
-          .content-block-lg
-            .text-size-large.content-block
-              | В честь открытия состоятся
-              br
-              | соревнования по КроссФит
-              br
-              | с призовым фондом в
-              | &nbsp;
-              strong
-                | 100 000 рублей
-            = link_to 'http://vk.com/redshelltotal', target: :blank, class: 'btn btn-white--outline' do
-              | Подробности и условия участия
-          hr.content-block
-          .content-block-lg
-            p.text-size-large.content-block
-              | Следите за новостями
-            p
-              = link_to 'http://vk.com/crossfitrs', target: :blank, class: 'btn btn-white--outline' do
-                | Вконтакте
-              | &nbsp;&nbsp;&nbsp;
-              = link_to 'https://instagram.com/crossfitredshell/', target: :blank, class: 'btn btn-white--outline' do
-                | Instagram
-              | &nbsp;&nbsp;&nbsp;
-              = link_to 'http://forum.na-svyazi.ru/?showtopic=2177708/', target: :blank, class: 'btn btn-white--outline' do
-                | Форум &laquo;На связи&raquo;
-
-
-.welcome-contacts
+          = render 'landing/intro'
+.welcome-contacts.welcome-content
+  .container
+    .row
+      .content-block
+        = render 'landing/intro_features'
+.welcome-content-block
   .container
     .row
       .col-sm-8.col-sm-offset-2
-        .text-size-large
+        .content-block
+        = render 'landing/description'
+.landing-teaser--form-container
+  .welcome-contacts.welcome-content.landing-teaser--form-container-bg
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          = render 'landing/form', lead: @new_lead
+.welcome-contacts.welcome-content
+  .container
+    .row
+      .col-sm-8.col-sm-offset-2
+        p.text-size-large.content-block
+          | Следите за новостями
+        p
+          = link_to 'http://vk.com/crossfitrs', target: :blank, class: 'btn btn-white--outline' do
+            | Вконтакте
+          | &nbsp;&nbsp;&nbsp;
+          = link_to 'https://instagram.com/crossfitredshell/', target: :blank, class: 'btn btn-white--outline' do
+            | Instagram
+          | &nbsp;&nbsp;&nbsp;
+          = link_to 'http://forum.na-svyazi.ru/?showtopic=2177708/', target: :blank, class: 'btn btn-white--outline' do
+              | Форум &laquo;На связи&raquo;
+
+.welcome-content-block
+  .container
+    .row
+      .col-sm-8.col-sm-offset-2
+        .content-block-lg
+        .text-size-large.content-block-lg
           | Чебоксары,
           br
           | Текстильщиков, 8 корпус 16

@@ -1,16 +1,41 @@
 defaults: &defaults
   app:
-    title: Crossfit Red Shell Чебоксары — аффилированный клуб кроссфита
-    meta_title: Кроссфит CrossFit Red Shell
+    title: CrossFit Red Shell Чебоксары — аффилированный клуб кроссфита
+    share_title: CrossFit Red Shell Чебоксары
+    share_description: аффилированный клуб CrossFit
+    meta_title: КроссФит CrossFit Red Shell
     meta_description: Кроссфит в Чебоксарах. Аффилированный клуб. Просторный зал, сертифицированные тренера, профессиональное оборудование. Тренировки, соревнования, программы.
     phone: (8352) 38-47-17
     phone_tel: +78352384717
     admin_email: admin@crossfitredshell.com
 
+    asset_host: http://crossfitredshell.com
+
+    default_url_options: &default_url_options
+      host: localhost
+      port: 3000
+
+  mailer_defaults: &mailer_defaults
+    from: 'mailer@crossfitredshell.com'
+    host: crossfitredshell.com
+
+  action_mailer:
+    default_url_options:
+      <<: *default_url_options
+    raise_delivery_errors: false
+    service: smtp
+    smtp_settings:
+      address: 'smtp.yandex.ru'
+      domain:  '127.0.0.1:3000'
+      port:    587
+      email:   'mailer@crossfitredshell.com'
+      user_name: 'mailer@crossfitredshell.com'
+      password: 'RedshellMailer3000'
+      authentication: plain
+      enable_starttls_auto: true
+
 development:
   <<: *defaults
-
-
 test:
   <<: *defaults
 
