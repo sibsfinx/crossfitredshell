@@ -9,11 +9,11 @@
           .col-md-10
             .welcome-content
               = render 'landing/intro'
-.welcome-contacts.welcome-content
+.welcome-content-block.welcome-content-block--dark
   .container
-    .row
-      .content-block
-        = render 'landing/intro_features'
+    .content-block-lg
+    .content-block
+      = render 'landing/intro_features'
 .welcome-content-block
   .container
     .row
@@ -31,44 +31,38 @@
     .row
       .col-sm-8.col-sm-offset-2
         = render 'landing/sections'
+.welcome-content-block.welcome-content-block--dark
+  .container
+    .row
+      .col-sm-8.col-sm-offset-2
+        .content-block-lg
+        .content-block-lg
+          = render 'landing/coaches'
 .landing-teaser--form-container-trial
   .welcome-contacts.welcome-content.landing-teaser--form-container-bg
     .container
       .row
         .col-sm-8.col-sm-offset-2
           = render 'landing/trial_form_block', lead: @new_lead, subject: :trial
-.welcome-contacts.welcome-content
-  .container
-    .row
-      .col-sm-8.col-sm-offset-2
-        p.text-size-large.content-block
-          | Следите за новостями
-        p
-          = link_to 'http://vk.com/crossfitrs', target: :blank, class: 'btn btn-white--outline' do
-            | Вконтакте
-          | &nbsp;&nbsp;&nbsp;
-          = link_to 'https://instagram.com/crossfitredshell/', target: :blank, class: 'btn btn-white--outline' do
-            | Instagram
-          | &nbsp;&nbsp;&nbsp;
-          = link_to 'http://forum.na-svyazi.ru/?showtopic=2177708/', target: :blank, class: 'btn btn-white--outline' do
-              | Форум &laquo;На связи&raquo;
-
 .welcome-content-block
   .container
     .row
       .col-sm-8.col-sm-offset-2
         .content-block-lg role="contacts-block"
-        .text-size-large.content-block-lg
-          | Чебоксары,
-          br
-          | Текстильщиков, 8 корпус 16
+        .content-block-lg
+          = render 'landing/contacts'
+
+.welcome-contacts.welcome-content
+  .container
+    .row
+      .col-sm-8.col-sm-offset-2
+        = render 'landing/follow'
 
 .welcome-map
   = render 'map'
 
 .welcome-contacts.welcome-content
   .container
-    .row
-      .content-block
-        = render 'landing/partners'
+    .content-block
+      = render 'landing/partners'
 

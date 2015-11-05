@@ -1,0 +1,12 @@
+.text-size-large.content-block
+  | Чебоксары,
+  br
+  | Текстильщиков, 8 корпус 16
+
+= link_to "tel:#{Settings.app.phone_tel}", class: 'btn btn-red--outline btn-block--line' do
+  = Settings.app.phone
+| &nbsp;&nbsp;&nbsp;
+= mail_to "#{Settings.app.admin_email}?subject=Заказ абонемента в CrossFit RedShell", class: 'btn btn-red--outline btn-block--line' do
+  = Settings.app.admin_email
+
+

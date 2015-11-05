@@ -33,11 +33,6 @@ hr.content-block-lg
 .text-center
   .content-block
     | Есть вопросы? Напишите на емэйл или позвоните нам
-  = link_to "tel:#{Settings.app.phone_tel}", class: 'btn btn-white--outline' do
-    = Settings.app.phone
-  | &nbsp;&nbsp;&nbsp;
-  = mail_to "#{Settings.app.admin_email}?subject=Заказ абонемента в CrossFit RedShell", class: 'btn btn-white--outline' do
-    = Settings.app.admin_email
-
+  = render 'landing/contact_buttons'
 
 
