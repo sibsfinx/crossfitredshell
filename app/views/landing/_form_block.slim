@@ -4,30 +4,9 @@
   .landing-teaser--form-success.hide role='landing-teaser--form-success'
     | Спасибо! Мы перезвоним вам
   div role='landing-teaser--form'
-    .content-block-lg
-      p
-        | В честь открытия,
-        strong
-          |  8 ноября с 12:00 до 20:00
-        |  успейте приобрести абонемент на 12&nbsp;занятий по праздничным ценам:
-      ul
-        li
-          strong
-            | 1500 рублей
-          |  для посещения занятий до 15:00;
-        li
-          strong
-            | 2500 рублей
-          |  для посещения в любое время.
-      p
-        | Абонемент действует 2 месяца и даёт право доступа занятия любых направлений по вашему выбору.
-      p
-        | Количество абонементов ограничено, не упустите шанс стать лучше!
-    hr.content-block-lg
-    div role="buy-card-form"
-      .text-size-large.content-block.text-center
-        | Оформить заявку на абонемент
-      = render 'landing/form', lead: lead, subject: subject
+    .text-size-large.content-block.text-center
+      | Оформить заявку на абонемент
+    = render 'landing/form', lead: lead, subject: subject
 
 hr.content-block-lg
 .text-center

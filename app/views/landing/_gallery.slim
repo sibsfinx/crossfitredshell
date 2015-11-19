@@ -3,7 +3,7 @@
     div role="pswp-collection"
       - images_count = 5
       - for i in 0..(images_count-1)
-        .col-md-3 style="width: #{100/images_count}%"
+        .col-xs-3 style="width: #{100/images_count}%"
           figure.welcome-gallery__block itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"
             = link_to image_path("interior/large/#{i+1}.jpg"),
                 role: 'pswp-link', data: {size: "600x400", index: i}, itemprop: "contentUrl",

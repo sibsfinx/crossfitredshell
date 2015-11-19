@@ -25,32 +25,30 @@
     .content-block
     .content-block-lg
       = render 'landing/gallery'
-
-/ order form
-/.landing-teaser--form-container
+hr
+.welcome-content-block role="schedule-block"
+  .container
+    .row
+      .col-sm-8.col-sm-offset-2
+        .content-block-lg
+        = render 'landing/prices'
+.landing-teaser--form-container role="buy-card-form"
   .welcome-contacts.welcome-content.landing-teaser--form-container-bg
     .container
       .row
         .col-sm-8.col-sm-offset-2
           = render 'landing/form_block', lead: @new_lead, subject: :card
-hr
-.welcome-content-block
-  .container
-    .row
-      .col-sm-8.col-sm-offset-2
-        = render 'landing/prices'
-
-.landing-teaser--form-container-trial
-  .welcome-contacts.welcome-content.landing-teaser--form-container-bg
-    .container
-      .row
-        .col-sm-8.col-sm-offset-2
-          = render 'landing/trial_form_block', lead: @new_lead, subject: :trial
 .welcome-content-block
   .container
     .row
       .col-sm-8.col-sm-offset-2
         = render 'landing/sections'
+.landing-teaser--form-container-trial role="trial-form"
+  .welcome-contacts.welcome-content.landing-teaser--form-container-bg
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          = render 'landing/trial_form_block', lead: @new_lead, subject: :trial
 .welcome-content-block.welcome-content-block--dark
   .container
     .row
