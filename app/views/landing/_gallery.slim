@@ -2,8 +2,10 @@
   .row
     div role="pswp-collection"
       - images_count = 5
-      - for i in 0..images_count
+      - for i in 0..(images_count-1)
         .col-md-3 style="width: #{100/images_count}%"
           figure.welcome-gallery__block itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"
-            = link_to image_path("interior/large/#{i+1}.jpg"), role: 'pswp-link', data: {size: "600x400", index: 0}, itemprop: "contentUrl", class: 'welcome-gallery__block-link' do
+            = link_to image_path("interior/large/#{i+1}.jpg"),
+                role: 'pswp-link', data: {size: "600x400", index: i}, itemprop: "contentUrl",
+                class: 'welcome-gallery__block-link', target: :blank do
               = image_tag image_path("interior/small/#{i+1}.jpg"), class: 'welcome-gallery__block-link-image', itemprop: :thumbnail, alt: "CrossFit Red Shell, фотографии зала"
