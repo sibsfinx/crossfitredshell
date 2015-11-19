@@ -1,0 +1,9 @@
+.welcome-gallery itemscope="" itemtype="http://schema.org/ImageGallery"
+  .row
+    div role="pswp-collection"
+      - images_count = 5
+      - for i in 1..images_count
+        .col-md-3 style="width: #{100/images_count}%"
+          figure.welcome-gallery__block itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"
+            = link_to image_path("interior/large/#{i}.jpg"), role: 'pswp-link', 'data-size' => "600x400", itemprop: "contentUrl", class: 'welcome-gallery__block-link' do
+              = image_tag image_path("interior/small/#{i}.jpg"), class: 'welcome-gallery__block-link-image', itemprop: :thumbnail, alt: "CrossFit Red Shell, фотографии зала"

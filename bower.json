@@ -19,6 +19,8 @@
     "bootstrap-sass-official": "bootstrap-sass-official#~3.3.5",
     "jquery": "~2.1.4",
     "jquery.role": "git://github.com/kossnocorp/role",
+    "lodash": "~3.10.1",
+    "photoswipe": "~4.1.0",
     "webfontloader": "git@github.com:typekit/webfontloader.git#~1.6.6"
   },
   "devDependencies": {

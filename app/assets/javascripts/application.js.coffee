@@ -1,9 +1,13 @@
 #= require jquery
 #= require jquery_ujs
 #= require jquery/dist/jquery
+#= require lodash
 #= require FitText.js/jquery.fittext
 #= require jquery.role/lib/jquery.role
+#= require photoswipe/dist/photoswipe
+#= require photoswipe/dist/photoswipe-ui-default
 #= require lead_form
+#= require gallery
 
 # require webfontloader/webfontloader
 # require font_loader
