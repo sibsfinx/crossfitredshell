@@ -2,14 +2,20 @@
 
 .content-block-lg role="schedule-block"
 - sections[:intro].map{|i| i.symbolize_keys! }.each do |item|
-  .content-block-lg
-    p.text-size-larger.text-accented-black role="fit-text-limited" data-max-font-size="50"
-      = item[:title]
+  .content-block
+    - if item[:title].present?
+      p.text-size-larger.text-accented-black role="fit-text-limited" data-max-font-size="50"
+        = item[:title]
     p.content-block-sm
       = item[:text]
-    = link_to 'Расписание занятий', image_url('schedule.jpg'), target: :blank, class: 'btn btn-red--outline btn-block--line'
-    | &nbsp;&nbsp;
-    = link_to 'Стоимость', image_url('price.png'), target: :blank, class: 'btn btn-red--outline btn-block--line'
+
+- sections[:time].map{|i| i.symbolize_keys! }.each do |item|
+  .content-block-lg
+    - if item[:title].present?
+      p.text-size-larger.text-accented-black role="fit-text-limited" data-max-font-size="50"
+        = item[:title]
+    p.content-block-sm
+      = item[:text]
 
   hr.content-block-lg
 

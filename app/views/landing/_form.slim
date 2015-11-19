@@ -1,3 +1,5 @@
+- btn_text ||= 'Отправить'
+
 - if subject.present? && subject == :card
   - fields = Lead::FORM_FIELDS
 - else
@@ -23,7 +25,7 @@
         = button_tag type: 'submit', class: 'btn btn-lg btn-block btn-red',
             role: 'landing-teaser--form-submit-btn',
             :data => { 'disable-with' => 'Отправляем…' } do
-          | Отправить
+          = btn_text
       small.help-block-sm.text-size-smaller
         | Мы не будем присылать вам спам, честное слово!
 
