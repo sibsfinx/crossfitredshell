@@ -10,7 +10,7 @@ ru:
       # html: '<abbr title="required">*</abbr>'
     include_blank:
       hotel:
-        hotel_kind_id: 'Любой' 
+        hotel_kind_id: 'Любой'
 
     error_notification:
       default_message: "Обнаружены ошибки, пожалуйста, взгляните на них"
@@ -34,3 +34,8 @@ ru:
     hints:
       defaults:
         price: руб.
+    options:
+      lead:
+        card_type:
+          common: Обычный абонемент
+          student: Студенческий абонемент

@@ -6,6 +6,7 @@ ActiveAdmin.register Lead do
     column :subject do |lead|
       t("activerecord.attributes.lead.subjects.#{lead.subject}") if lead.subject.present?
     end
+    column :card_type
     column :cards_quantity
     column :created_at
     actions

@@ -3,6 +3,7 @@ class Lead < ActiveRecord::Base
   FORM_FIELDS = [:name, :phone, :cards_quantity]
   TRIAL_FORM_FIELDS = [:name, :phone]
   MANAGER_EMAIL = "crossfitredshell@yandex.ru"
+  CARD_TYPES = [:common, :student]
 
   validates :phone, :name, presence: true
 
