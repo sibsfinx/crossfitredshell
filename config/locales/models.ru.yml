@@ -11,4 +11,7 @@ ru:
         subjects:
           card: Абонементы
           trial: Пробное занятие
-
+        card_type: Тип абонемента
+        card_types:
+          common: Обычный
+          student: Студенческий
