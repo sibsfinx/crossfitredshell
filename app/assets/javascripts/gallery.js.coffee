@@ -1,6 +1,14 @@
 window.Gallery ||= {}
 
 ((app) ->
+
+  app.options =
+    history: false
+    focus: false
+    escKey: true
+    showAnimationDuration: 0
+    hideAnimationDuration: 0
+    tapToToggleControls: true
   $(document).ready ->
     $pswpElement = $('.pswp')[0]
     $pswpCollection = $('@pswp-collection')
@@ -11,15 +19,25 @@ window.Gallery ||= {}
         e.preventDefault()
         items = _.map $pswpLinks, getItem
         index = $(@).data('index') || 0
+        gallery = new PhotoSwipe $pswpElement, PhotoSwipeUI_Default, items, app.options
         app.openPhotoSwipe $pswpElement, items, index
+        gallery.listen 'gettingData', (index, item) ->
+          if item.w < 1 or item.h < 1
+            img = new Image
+            img.onload = ->
+              item.w = @width
+              item.h = @height
+              gallery.invalidateCurrItems()
+              gallery.updateSize true
+              return
+            img.src = item.src
+          return
+        gallery.init()
 
   getItem = (link) ->
     src = $(link).attr 'href'
-    img = new Image
-    img.src = src
-    w = img.naturalWidth
-    h = img.naturalHeight
-    #img = null
+    w = 0
+    h = 0
     {
       src: src
       w: w
@@ -27,15 +45,6 @@ window.Gallery ||= {}
     }
 
   app.openPhotoSwipe = ($pswpElement, items, index) ->
-    options =
-      history: false
-      focus: false
-      escKey: true
-      showAnimationDuration: 0
-      hideAnimationDuration: 0
-      tapToToggleControls: true
-    gallery = new PhotoSwipe($pswpElement, PhotoSwipeUI_Default, items, options)
-    gallery.init()
     return
 
 )(window.Gallery ||= {})

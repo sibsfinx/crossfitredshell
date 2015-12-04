@@ -1,11 +1,15 @@
 .welcome-gallery itemscope="" itemtype="http://schema.org/ImageGallery"
-  .row
-    div role="pswp-collection"
+  .content-block
+    .welcome-gallery__blocks-list role="pswp-collection"
       - images_count = 5
       - for i in 0..(images_count-1)
-        .col-xs-3 style="width: #{100/images_count}%"
-          figure.welcome-gallery__block itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"
-            = link_to image_path("interior/large/#{i+1}.jpg"),
-                role: 'pswp-link', data: {size: "600x400", index: i}, itemprop: "contentUrl",
-                class: 'welcome-gallery__block-link', target: :blank do
-              = image_tag image_path("interior/small/#{i+1}.jpg"), class: 'welcome-gallery__block-link-image', itemprop: :thumbnail, alt: "CrossFit Red Shell, фотографии зала"
+        figure.welcome-gallery__block itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"
+          = link_to image_path("interior/large/#{i+1}.jpg"),
+              role: 'pswp-link', data: {size: "600x400", index: i}, itemprop: "contentUrl",
+              class: 'welcome-gallery__block-link', target: :blank, rel: :external do
+            = image_tag image_path("interior/small/#{i+1}.jpg"), class: 'welcome-gallery__block-link-image', itemprop: :thumbnail, alt: "CrossFit Red Shell, фотографии зала"
+  .text-center
+    = link_to 'https://vk.com/album-42359926_223678545', rel: :nofollow, target: :blank do
+      | Все фотографии
+      | &nbsp;
+      | &rarr;
