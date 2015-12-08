@@ -115,6 +115,7 @@ gem 'activeadmin', github: 'activeadmin'
 
 # Server
 gem 'puma'
+gem 'tunemygc'
 
 # Usefull Stuff
 # gem 'tinymce-rails'
