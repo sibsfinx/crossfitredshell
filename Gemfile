@@ -33,7 +33,7 @@ gem 'slim-rails'
 gem 'haml-rails'
 
 # Forms
-gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
+gem 'simple_form', '>= 3.0.0'
 # gem 'cocoon'
 
 # Presenters Decorators
@@ -60,7 +60,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
 # Css
-gem 'bootstrap-sass', '~> 3.2.0'
+# gem 'bootstrap-sass', '~> 3.3.3'
 # gem 'compass'
 # gem 'compass-rails'
 gem 'sass-rails', '~> 5.0'
@@ -74,6 +74,7 @@ gem 'carrierwave'
 # Admin
 # gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem 'storytime', '2.0.0'
 
 # Queue
 # gem 'sidekiq'
