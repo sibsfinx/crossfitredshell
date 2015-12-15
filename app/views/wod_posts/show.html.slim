@@ -1,2 +1,16 @@
-h1 WodPosts#show
-p Find me in app/views/wod_posts/show.html.slim
+.navbar.navbar-default
+  .container
+    ul.nav.navbar-nav
+      li
+        = link_to wod_posts_path do
+          | &larr;&nbsp; Все тренировки
+.container
+  .text-size-larger.content-block-sm
+    strong= item.title
+  .text-size-large.content-block-sm
+    = l item.effective_date, format: :day
+  p
+    = item.content.html_safe
+  hr.content-block
+
+  = render 'wod_posts/disqus', page_url: wod_post_url(item), page_identifier: "#{item.class.name.downcase}-#{item.id}"

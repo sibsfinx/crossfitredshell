@@ -6,5 +6,7 @@ class WodPostsController < ApplicationController
   end
 
   def show
+    item = WodPost.friendly.find(params[:id])
+    render locals: {item: item}
   end
 end
