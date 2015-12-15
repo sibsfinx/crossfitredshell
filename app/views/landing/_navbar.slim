@@ -1,5 +1,8 @@
 .welcome-navbar
   nav
+    = render_navigation :expand_all => true, :renderer => :bootstrap
+    .clearfix
+  nav
     ul.nav.welcome-navbar__nav
       li
         a href="#" role="scroll-link" data-target="@description-block"

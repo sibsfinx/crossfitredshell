@@ -1,0 +1,24 @@
+.container
+  .content-block
+  .content-block-lg
+    .row
+      .col-md-6
+        - current_items.each do |item|
+          .content-block
+            .text-size-large.content-block-sm
+              strong= item.title
+            .text-size-large.content-block-sm
+              = l item.effective_date, format: :day
+            p
+              = item.content.html_safe
+          hr.content-block
+.container
+  .text-size-large.content-block
+    | Остальные тренировки
+  - collection.each do |item|
+    .content-block
+      h3
+        = item.title
+      p
+        = item.content.html_safe
+    hr.content-block

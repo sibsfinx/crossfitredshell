@@ -35,6 +35,7 @@ ru:
       long: ! '%d %B %Y'
       short: ! '%d %B'
       month: ! '%B %Y'
+      day: ! '%d %m %Y'
     month_names:
     -
     - января
@@ -176,7 +177,7 @@ ru:
     select:
       prompt: ! 'Выберите: '
     submit:
-      create: Создать 
+      create: Создать
       submit: Сохранить
       update: Сохранить
     you: ! ' (Вы)'
@@ -260,6 +261,7 @@ ru:
       default: ! '%a, %d %B %Y, %H:%M:%S %z'
       long: ! '%d %B %Y, %H:%M'
       short: ! '%d %B, %H:%M'
+      day: ! '%d %B %Y'
     pm: вечера
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
@@ -276,4 +278,4 @@ ru:
       <<: *errors
   errors:
     building:
-      destroy: Не возможно удалить запись 
+      destroy: Не возможно удалить запись
