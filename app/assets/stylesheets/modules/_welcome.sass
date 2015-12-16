@@ -28,6 +28,10 @@ $welcome-logo-height-xs: $welcome-logo-height/1.5
   @media screen and (max-width: $screen-sm-max)
     background-position: 30% top
 
+.welcome-container-sm
+  min-height: 0
+  background-position: center
+
 .welcome-logo
   display: block
   background:
@@ -40,6 +44,13 @@ $welcome-logo-height-xs: $welcome-logo-height/1.5
   @media screen and (max-width: $screen-sm-max)
     width: $welcome-logo-width-xs
     height: $welcome-logo-height-xs
+
+.welcome-logo-sm
+  width: $welcome-logo-width/1.5
+  height: $welcome-logo-height/1.5
+  @media screen and (max-width: $screen-sm-max)
+    width: $welcome-logo-width-xs/1.5
+    height: $welcome-logo-height-xs/1.5
 
 .welcome-content
   @extend %content-dividers--white
@@ -100,6 +111,13 @@ $welcome-logo-height-xs: $welcome-logo-height/1.5
         color: #fff
         border-bottom: 1px solid $c-red-light
         background: none
+    &.active
+      & > a
+        &, &:hover
+          text-decoration: none
+          color: #fff
+          border-bottom: 1px solid $c-red-light
+          background: none
 
 .welcome-gallery__blocks-list
   width: 100%

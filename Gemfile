@@ -6,7 +6,10 @@ gem 'rails', '4.2.3'
 gem 'pg'
 gem 'squeel'
 # gem 'counter_culture', '~> 0.1.23'
-# gem 'friendly_id', '~> 5.0.0'
+
+gem 'friendly_id', '~> 5.1.0'
+gem 'russian'
+gem 'babosa'
 
 # Config
 gem 'settingslogic'
@@ -74,6 +77,7 @@ gem 'carrierwave'
 # Admin
 # gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem 'tinymce-rails'
 
 # Queue
 # gem 'sidekiq'

@@ -39,6 +39,9 @@ module Redshell
     #   config.i18n.reload!
     # end
 
+    config.sass.preferred_syntax = :sass
+    config.generators.template_engine = :slim
+
     config.i18n.locale = :ru
     config.i18n.default_locale = :ru
 

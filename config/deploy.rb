@@ -3,7 +3,9 @@ lock '3.4.0'
 set :application, 'redshell'
 set :repo_url, 'git@github.com:sibsfinx/crossfitredshell.git'
 
-set :branch, ENV['BRANCH'] || 'master'
+#set :branch, ENV['BRANCH'] || 'master'
+
+ask :branch, ENV["BRANCH"] || 'master'
 
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

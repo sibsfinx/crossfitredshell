@@ -3,13 +3,7 @@ html
   head
     = render 'layouts/head'
   body class = "#{controller_name} #{action_name}"
-    = render 'layouts/navigation'
-    #main role = "main"
-      .container
-        .content
-          .row
-            .col-md-12
-              = render 'layouts/messages'
-              == yield
+    = render 'layouts/navbar'
+    == yield
     = render 'layouts/gallery'
     = render 'layouts/analytics'

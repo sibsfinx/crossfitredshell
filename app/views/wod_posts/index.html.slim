@@ -1,0 +1,8 @@
+.container
+  .content-block
+  /.content-block-lg
+    - current_items.each do |item|
+      = render 'wod_posts/item_block', item: item
+.container
+  - collection.each do |item|
+    = render 'wod_posts/item_block', item: item

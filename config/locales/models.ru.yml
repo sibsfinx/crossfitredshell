@@ -2,6 +2,7 @@ ru:
   activerecord:
     models:
       lead: Заявка
+      wod_post: Тренировка дня
     attributes:
       lead:
         phone: Номер телефона
@@ -15,3 +16,8 @@ ru:
         card_types:
           common: Обычный
           student: Студенческий
+      wod_post:
+        title: Название тренировки
+        default_title: Тренировка дня
+        effective_date: Дата тренировки
+        content: Описание

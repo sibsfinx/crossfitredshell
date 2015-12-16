@@ -1,0 +1,8 @@
+.welcome-container.welcome-container-sm
+  .container
+    .row
+      .col-md-2
+        = link_to '', root_url, class: 'welcome-logo welcome-logo-sm'
+      .col-md-10
+        = render_navigation :expand_all => true, :renderer => :bootstrap
+
