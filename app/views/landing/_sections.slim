@@ -9,7 +9,7 @@
     p.content-block-sm
       = item[:text]
 
-/- sections[:time].map{|i| i.symbolize_keys! }.each do |item|
+- sections[:time].map{|i| i.symbolize_keys! }.each do |item|
   .content-block-lg
     - if item[:title].present?
       p.text-size-larger.text-accented-black role="fit-text-limited" data-max-font-size="50"
@@ -17,7 +17,7 @@
     p.content-block-sm
       = item[:text]
 
-/  hr.content-block-lg
+hr.content-block-lg
 
 
 /- sections[:list].map{|i| i.symbolize_keys! }.each do |item|
