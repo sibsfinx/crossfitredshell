@@ -1,4 +1,4 @@
-- if Rails.env.production?
+- if Rails.env.production? && !is_admin?
   javascript:
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
@@ -23,9 +23,9 @@
             d.addEventListener("DOMContentLoaded", f, false);
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
-noscript
-  div
-    img alt="" src="https://mc.yandex.ru/watch/33039869" style="position:absolute; left:-9999px;"
+  noscript
+    div
+      img alt="" src="https://mc.yandex.ru/watch/33039869" style="position:absolute; left:-9999px;"
 
 script#dsq-count-scr async="" src="//crossfitredshell.disqus.com/count.js"
 
