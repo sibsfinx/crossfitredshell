@@ -6,6 +6,7 @@ ActiveAdmin.register Section do
       f.input :title
       f.input :slug
       f.input :active
+      f.input :position
       f.input :description
       f.input :content, input_html: {role: 'admin-content-editor'}
     end
@@ -18,6 +19,7 @@ ActiveAdmin.register Section do
     column :slug
     column :title
     column :active
+    column :position
     actions
   end
 
