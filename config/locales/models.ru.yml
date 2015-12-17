@@ -3,6 +3,7 @@ ru:
     models:
       lead: Заявка
       wod_post: Тренировка дня
+      section: Направление
     attributes:
       lead:
         phone: Номер телефона
@@ -21,3 +22,8 @@ ru:
         default_title: Тренировка дня
         effective_date: Дата тренировки
         content: Описание
+      section:
+        title: Название
+        content: Описание
+        position: Номер в списке направлений
+        active: Активное

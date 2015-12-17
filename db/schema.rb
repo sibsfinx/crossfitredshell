@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215101133) do
+ActiveRecord::Schema.define(version: 20151217121251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,20 @@ ActiveRecord::Schema.define(version: 20151215101133) do
     t.string   "subject"
     t.string   "card_type"
   end
+
+  create_table "sections", force: :cascade do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.text     "content"
+    t.boolean  "active"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "position",    default: 0
+    t.text     "description"
+  end
+
+  add_index "sections", ["active"], name: "index_sections_on_active", using: :btree
+  add_index "sections", ["position"], name: "index_sections_on_position", using: :btree
 
   create_table "wod_posts", force: :cascade do |t|
     t.string   "title"

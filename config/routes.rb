@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :leads, only: [:create]
   resources :wod_posts, only: [:index, :show], path: '/wod'
+  resources :sections, only: [:index, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

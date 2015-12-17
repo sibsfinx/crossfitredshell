@@ -1,0 +1,10 @@
+.content-block
+  .row
+    .col-md-4
+      = link_to section_path(item), class: 'text-size-large content-block-sm' do
+        = item.title
+    .col-md-8
+      = item.description
+
+hr.content-block
+

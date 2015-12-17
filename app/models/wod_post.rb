@@ -10,6 +10,10 @@ class WodPost < ActiveRecord::Base
 
   #paginates_per 10
 
+  def to_s
+    "#{title}"
+  end
+
   def wod_slug
     "#{title}-#{effective_date.strftime('%d-%m-%Y')}"
   end

@@ -1,0 +1,13 @@
+.navbar.navbar-default
+  .container
+    ul.nav.navbar-nav
+      li
+        = link_to sections_path do
+          | &larr;&nbsp; Все направления
+.container
+  .text-size-larger.content-block-sm
+    strong= item.title
+  p
+    = item.content.html_safe
+  hr.content-block
+

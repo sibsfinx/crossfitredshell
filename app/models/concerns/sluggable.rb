@@ -13,5 +13,10 @@ module Sluggable
     input.to_s.to_slug.normalize(transliterations: :russian).to_s
   end
 
+  def to_s
+    "#{title}"
+  end
+
+
 end
 
