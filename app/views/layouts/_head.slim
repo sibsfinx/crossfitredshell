@@ -1,8 +1,11 @@
 meta name="viewport"  content="width=device-width, initial-scale=1, maximum-scale=1"
 title= content_for?(:title) ? yield(:title) : Settings.app.title
 //meta content="#{content_for?(:description) ? yield(:description) : Settings.app.title}" name="description"
-meta name="title" content="#{Settings.app.meta_title.presence}"
-meta name="description" content="#{Settings.app.meta_description.presence}"
+
+meta name ="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
+title =content_for?(:title) ? yield(:title) : Settings.app.meta_title
+meta content="#{content_for?(:meta_description) ? yield(:meta_description) : Settings.app.meta_description}" name="description"
+meta content="#{content_for?(:meta_keywords) ? yield(:meta_keywords) : Settings.app.meta_keywords.presence}" name="Keywords"
 
 meta property="og:image" content="http://crossfitredshell.com#{image_path('logo_caption_bullet.png')}"
 meta content="#{Settings.app.title}" property="og:title"

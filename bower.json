@@ -16,11 +16,13 @@
   "dependencies": {
     "FitText.js": "~1.2.0",
     "animate.css": "~3.4.0",
+    "autosize": "2.0.0",
     "bootstrap-sass-official": "bootstrap-sass-official#~3.3.5",
     "jquery": "~2.1.4",
     "jquery.role": "git://github.com/kossnocorp/role",
     "lodash": "~3.10.1",
     "photoswipe": "~4.1.0",
+    "select2": "3.5.2",
     "webfontloader": "git@github.com:typekit/webfontloader.git#~1.6.6"
   },
   "devDependencies": {

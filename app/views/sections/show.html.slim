@@ -1,3 +1,11 @@
+- content_for :title do
+  = page_title item.title
+- if item.meta_tags.present?
+  - content_for :meta_keywords do
+    = item.meta_tags.split(',').join(', ')
+- content_for :meta_description do
+  = item.meta_description
+
 .navbar.navbar-default
   .container
     ul.nav.navbar-nav

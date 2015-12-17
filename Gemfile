@@ -128,7 +128,7 @@ gem 'tunemygc'
 # gem 'jquery_datepicker'
 # gem 'easy_captcha'
 # gem 'x-editable-rails'
-# gem 'select2-rails'
+gem 'select2-rails'
 # gem 'rubylight', :git=>'git://github.com/azfire/rubylight.git'
 
 group :development do

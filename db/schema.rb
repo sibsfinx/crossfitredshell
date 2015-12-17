@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151217121251) do
+ActiveRecord::Schema.define(version: 20151217124151) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,10 +78,12 @@ ActiveRecord::Schema.define(version: 20151217121251) do
     t.string   "slug"
     t.text     "content"
     t.boolean  "active"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.integer  "position",    default: 0
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "position",         default: 0
     t.text     "description"
+    t.text     "meta_tags"
+    t.text     "meta_description"
   end
 
   add_index "sections", ["active"], name: "index_sections_on_active", using: :btree

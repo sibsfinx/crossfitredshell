@@ -9,6 +9,9 @@ ActiveAdmin.register Section do
       f.input :position
       f.input :description
       f.input :content, input_html: {role: 'admin-content-editor'}
+      f.input :meta_tags, input_html: {role: 'select2-tags', style: 'min-width: 400px;'}
+      f.input :meta_description, input_html: {role: 'autosize', rows: false, cols: false}
+      #end
     end
     f.actions
   end
