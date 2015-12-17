@@ -3,13 +3,13 @@
 .content-block-lg
 - sections[:intro].map{|i| i.symbolize_keys! }.each do |item|
   .content-block
-    - if item[:title].present?
+    /- if item[:title].present?
       p.text-size-larger.text-accented-black role="fit-text-limited" data-max-font-size="50"
         = item[:title]
     p.content-block-sm
       = item[:text]
 
-- sections[:time].map{|i| i.symbolize_keys! }.each do |item|
+/- sections[:time].map{|i| i.symbolize_keys! }.each do |item|
   .content-block-lg
     - if item[:title].present?
       p.text-size-larger.text-accented-black role="fit-text-limited" data-max-font-size="50"
@@ -17,10 +17,10 @@
     p.content-block-sm
       = item[:text]
 
-  hr.content-block-lg
+/  hr.content-block-lg
 
 
-- sections[:list].map{|i| i.symbolize_keys! }.each do |item|
+/- sections[:list].map{|i| i.symbolize_keys! }.each do |item|
   .content-block-lg
     p.text-size-large
       = item[:title]
@@ -28,11 +28,7 @@
       = item[:text]
   hr.content-block-lg
 
-- sections[:description].map{|i| i.symbolize_keys! }.each do |item|
-  .content-block-lg
-    p.text-size-large
-      = item[:title]
-    p
-      = item[:text]
+.content-block-lg
+  = link_to "Направления тренировок &rarr;".html_safe, sections_path, class: 'btn btn-red--outline'
 
 
