@@ -6,7 +6,8 @@ class WodPost < ActiveRecord::Base
   friendly_id :wod_slug, use: [:slugged, :finders, :history]
 
   scope :ordered, -> { order("effective_date desc") }
-  scope :current, -> { where(effective_date: Time.now.beginning_of_day) }
+  scope :current, -> { where(effective_date: Time.zone.now.beginning_of_day) }
+  scope :tomorrow, -> { where(effective_date: 1.day.from_now.in_time_zone.beginning_of_day) }
 
   #paginates_per 10
 
