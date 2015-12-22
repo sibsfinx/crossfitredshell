@@ -10,17 +10,20 @@
     p.content-block-sm
       = item.content.html_safe
 
-- if show_comments || show_socials
-  .row
-    .col-md-9.col-md-offset-3
+.row
+  .col-md-9.col-md-offset-3
+    - if show_more_link
       .content-block
-        - if show_socials
-          p.content-block-sm
-            = render 'wod_posts/share', item: item
-        - if show_comments
-          p
-            small
-              = link_to "#{wod_post_path(item)}#disqus_thread" do
-                | Комментарии
-                span.disqus-comment-count data-disqus-identifier="#{item.class.name.downcase}-#{item.id}"
+        = link_to wod_post_path(item) do
+          | Подробнее
+          | &nbsp;&rarr;
+    - if show_socials
+      p.content-block-sm
+        = render 'wod_posts/share', item: item
+    - if show_comments
+      p.content-block-sm
+        small
+          = link_to "#{wod_post_path(item)}#disqus_thread" do
+            | Комментарии
+            span.disqus-comment-count data-disqus-identifier="#{item.class.name.downcase}-#{item.id}"
 
