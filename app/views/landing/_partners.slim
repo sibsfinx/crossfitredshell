@@ -1,22 +1,28 @@
 .content-block-lg
   .text-size-large.text-center
     | Партнёры
+
+- width = "20%"
 .row
-  .col-sm-3
+  .col-sm-3 style="width: #{width}"
     .content-block-lg
       = link_to 'http://crossfit.com/', target: :blank, rel: :nofollow, class: 'link-red-lighter' do
         = image_tag image_url('logo-crossfit.png'), class: 'center-block content-block welcome-partner-logo'
-  .col-sm-3
+  .col-sm-3 style="width: #{width}"
+    .content-block-lg
+      = link_to 'http://journal.crossfit.com/', target: :blank, rel: :nofollow, class: 'link-red-lighter' do
+        = image_tag image_url('logo-crossfit-journal-white.png'), class: 'center-block content-block welcome-partner-logo'
+  .col-sm-3 style="width: #{width}"
     .content-block-lg
       = link_to 'http://crossfitidol.ru/', target: :blank, rel: :nofollow, class: 'link-red-lighter' do
         = image_tag image_url('logo-idol.jpg'), class: 'center-block content-block welcome-partner-logo'
-  .col-sm-3
-    .content-block-lg
-      = link_to 'http://www.reebok.ru/', target: :blank, rel: :nofollow, class: 'link-red-lighter' do
-        = image_tag image_url('logo-recordsmen-white.png'), class: 'center-block content-block welcome-partner-logo'
-  .col-sm-3
+  .col-sm-3 style="width: #{width}"
     .content-block-lg
       = link_to 'http://www.musclemedsrx.ru/', target: :blank, rel: :nofollow, class: 'link-red-lighter' do
+        = image_tag image_url('logo-recordsmen-white.png'), class: 'center-block content-block welcome-partner-logo'
+  .col-sm-3 style="width: #{width}"
+    .content-block-lg
+      = link_to 'http://www.reebok.ru/', target: :blank, rel: :nofollow, class: 'link-red-lighter' do
         = image_tag image_url('logo-reebok-white.png'), class: 'center-block content-block welcome-partner-logo'
 
 

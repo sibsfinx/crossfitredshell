@@ -12,5 +12,6 @@
   p
     = item.content.html_safe
   hr.content-block
-
+  = render 'wod_posts/share', item: item
+  hr.content-block
   = render 'wod_posts/disqus', page_url: wod_post_url(item), page_identifier: "#{item.class.name.downcase}-#{item.id}"

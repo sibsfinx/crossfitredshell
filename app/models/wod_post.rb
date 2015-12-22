@@ -18,6 +18,10 @@ class WodPost < ActiveRecord::Base
     "#{title}-#{effective_date.strftime('%d-%m-%Y')}"
   end
 
+  def wod_title
+    "#{title} #{effective_date.strftime('%d-%m-%Y')}"
+  end
+
   def should_generate_new_friendly_id?
     title_changed? or effective_date_changed? or slug.nil? or slug.blank?
   end

@@ -1,0 +1,5 @@
+- share_description = strip_html item.content.html_safe, urlencode_new_line: true
+= render 'landing/share',
+  locals: {share_title: item.wod_title, share_url: wod_post_url(item),
+  share_description: share_description, link_class: 'btn btn-red--outline btn-xs btn-block--line'}
+

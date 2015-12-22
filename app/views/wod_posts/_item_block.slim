@@ -3,17 +3,21 @@
     .wod-list__item-date
       = l item.effective_date, format: :day
   .col-md-6
+    / = link_to wod_post_path(item), class: 'text-size-large content-block-sm' do
+    / .text-size-large.content-block-sm
+    p.content-block-sm
+      strong= item.title
+    p.content-block-sm
+      = item.content.html_safe
+.row
+  .col-md-9.col-md-offset-3
     .content-block
-      / = link_to wod_post_path(item), class: 'text-size-large content-block-sm' do
-      / .text-size-large.content-block-sm
       p.content-block-sm
-        strong= item.title
-      p.content-block-sm
-        = item.content.html_safe
+        = render 'wod_posts/share', item: item
       p
         small
           = link_to "#{wod_post_path(item)}#disqus_thread" do
             | Комментарии
             span.disqus-comment-count data-disqus-identifier="#{item.class.name.downcase}-#{item.id}"
 
-hr.content-block
+hr.content-block-lg
