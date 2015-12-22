@@ -9,11 +9,13 @@
           .col-md-10
             .welcome-content
               = render 'landing/intro'
-.welcome-content-block
-  .container
-    .row
-      - current_items.each do |item|
-        = render 'wod_posts/item_block', item: item, show_comments: false, show_socials: false
+
+- if current_items.any?
+  .welcome-content-block
+    .container
+      .row
+        - current_items.each do |item|
+          = render 'wod_posts/item_block', item: item, show_comments: false, show_socials: false
 
 .welcome-content-block.welcome-content-block--dark
   .container
