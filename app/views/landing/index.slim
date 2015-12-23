@@ -13,9 +13,8 @@
 - if current_items.any?
   .welcome-content-block
     .container
-      .row
-        - current_items.each do |item|
-          = render 'wod_posts/item_block', item: item, show_comments: false, show_socials: false, show_more_link: true
+      - current_items.each do |item|
+        = render 'wod_posts/item_block', item: item, show_comments: false, show_socials: false, show_more_link: true
 
 .welcome-content-block.welcome-content-block--dark
   .container
