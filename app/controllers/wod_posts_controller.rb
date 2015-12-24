@@ -1,8 +1,7 @@
 class WodPostsController < ApplicationController
   def index
-    posts = WodPost.ordered
-    current_items = WodPost.current
-    render locals: {collection: posts, current_items: current_items}
+    posts = WodPost.actual_list
+    render locals: {collection: posts}
   end
 
   def show

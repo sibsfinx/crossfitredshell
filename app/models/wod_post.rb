@@ -2,17 +2,37 @@ class WodPost < ActiveRecord::Base
   #include Sluggable
   include FriendlyId
 
+  NEW_WOD_TIME = 19
+
   validates :title, :content, :effective_date, presence: true
   friendly_id :wod_slug, use: [:slugged, :finders, :history]
 
   scope :ordered, -> { order("effective_date desc") }
-  scope :current, -> { where(effective_date: Time.zone.now.beginning_of_day) }
+  scope :actual_today, -> { ordered.where("effective_date <= ?", Time.zone.now.beginning_of_day) }
+  scope :actual_tomorrow, -> { ordered.where("effective_date <= ?", 1.day.from_now.in_time_zone.beginning_of_day) }
+  scope :today, -> { where(effective_date: Time.zone.now.beginning_of_day) }
   scope :tomorrow, -> { where(effective_date: 1.day.from_now.in_time_zone.beginning_of_day) }
 
   #paginates_per 10
 
   def to_s
     "#{title}"
+  end
+
+  def self.actual_list
+    if Time.zone.now.hour >= NEW_WOD_TIME
+      WodPost.actual_tomorrow
+    else
+      WodPost.actual_today
+    end
+  end
+
+  def self.actual
+    if Time.zone.now.hour >= NEW_WOD_TIME
+      WodPost.tomorrow
+    else
+      WodPost.today
+    end
   end
 
   def wod_slug
