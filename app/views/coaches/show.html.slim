@@ -1,0 +1,21 @@
+- content_for :title do
+  = page_title item.title
+- if item.meta_tags.present?
+  - content_for :meta_keywords do
+    = item.meta_tags.split(',').join(', ')
+- content_for :meta_description do
+  = item.meta_description
+
+.navbar.navbar-default
+  .container
+    ul.nav.navbar-nav
+      li
+        = link_to sections_path do
+          | &larr;&nbsp; Все направления
+.container
+  .text-size-larger.content-block-sm
+    strong= item.title
+  p
+    = item.content.html_safe
+  hr.content-block
+

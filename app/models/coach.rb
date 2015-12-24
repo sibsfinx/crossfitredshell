@@ -7,4 +7,6 @@ class Coach < ActiveRecord::Base
 
   scope :active, -> { where("active = ?", true).order('position ASC') }
 
+  mount_uploader :image, CoachUploader
+
 end

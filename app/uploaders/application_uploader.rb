@@ -3,7 +3,7 @@ if defined? CarrierWave
 
     # Include RMagick or MiniMagick support:
     #include CarrierWave::RMagick
-    #include CarrierWave::MiniMagick
+    include CarrierWave::MiniMagick
 
     # Choose what kind of storage to use for this uploader:
     storage :file
@@ -29,6 +29,17 @@ if defined? CarrierWave
     # def scale(width, height)
     #   # do something
     # end
+    version :standard do
+      process :resize_to_fit => [800, 600]
+    end
+
+    version :avatar do
+      process :resize_to_fill => [300, 300]
+    end
+
+    version :thumb do
+      process :resize_to_fill => [128, 128]
+    end
 
     # Create different versions of your uploaded files:
     # version :thumb do

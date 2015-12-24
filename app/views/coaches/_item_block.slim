@@ -1,0 +1,15 @@
+.content-block
+  .row
+    .col-md-4.text-center
+      .content-block-sm
+        = link_to coach_path(item) do
+          = image_tag item.image.avatar.url, class: 'img-circle center-block content-block welcome-feature-image welcome-feature-image--bordered coach__item-block-avatar'
+    .col-md-8
+      .content-block-sm.text-size-large
+        = link_to coach_path(item) do
+          = item.title
+
+      = item.description
+
+hr.content-block
+

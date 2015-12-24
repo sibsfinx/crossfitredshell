@@ -13,6 +13,8 @@ $ ->
   #$('[role*=admin-content-editor]').wysihtml5()
   tinyMCE.init
     selector: '[role*=admin-content-editor]'
+    #plugins: "uploadimage"
+    #uploadimage_default_img_class: "content-editor-image"
 
   $('@select2').select2
     width: 'resolve'

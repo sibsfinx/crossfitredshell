@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   resources :leads, only: [:create]
   resources :wod_posts, only: [:index, :show], path: '/wod'
   resources :sections, only: [:index, :show]
+  resources :coaches, only: [:index, :show]
+
+  post '/tinymce_assets' => 'tinymce_assets#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -78,6 +78,7 @@ gem 'carrierwave'
 # gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'tinymce-rails'
+gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
 
 # Queue
 # gem 'sidekiq'
