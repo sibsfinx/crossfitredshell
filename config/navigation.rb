@@ -9,7 +9,9 @@ SimpleNavigation::Configuration.run do |navigation|
 
     primary.item :welcome, 'Главная', root_url
 
-    primary.item :welcome, 'Направления и расписание', sections_path
+    primary.item :sections, 'Направления и расписание', sections_path
+
+    primary.item :coaches, 'Тренеры', coaches_path
 
     primary.item :wod, 'Тренировка дня / WOD', wod_posts_path
 

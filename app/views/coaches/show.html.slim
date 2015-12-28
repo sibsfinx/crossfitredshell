@@ -10,12 +10,18 @@
   .container
     ul.nav.navbar-nav
       li
-        = link_to sections_path do
-          | &larr;&nbsp; Все направления
+        = link_to coaches_path do
+          | &larr;&nbsp; Все тренеры
 .container
-  .text-size-larger.content-block-sm
-    strong= item.title
-  p
-    = item.content.html_safe
-  hr.content-block
+  .content-block
+  .row
+    .col-sm-4
+      .content-block-sm
+        = image_tag item.image.standard.url, class: 'img-circle center-block content-block welcome-feature-image--bordered coach__item-block-avatar'
+    .col-sm-7.col-md-offset-1
+      .text-size-larger.content-block-sm
+        strong= item.title
+      .content-block
+        = item.content.html_safe
+      hr.content-block
 
