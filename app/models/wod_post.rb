@@ -2,7 +2,8 @@ class WodPost < ActiveRecord::Base
   #include Sluggable
   include FriendlyId
 
-  NEW_WOD_TIME = 19
+  NEW_WOD_HOUR = 19
+  NEW_WOD_DAY = 1
 
   validates :title, :content, :effective_date, presence: true
   friendly_id :wod_slug, use: [:slugged, :finders, :history]
@@ -20,7 +21,7 @@ class WodPost < ActiveRecord::Base
   end
 
   def self.actual_list
-    if Time.zone.now.hour >= NEW_WOD_TIME
+    if Time.zone.now.hour >= NEW_WOD_HOUR
       WodPost.actual_tomorrow
     else
       WodPost.actual_today
@@ -28,7 +29,7 @@ class WodPost < ActiveRecord::Base
   end
 
   def self.actual
-    if Time.zone.now.hour >= NEW_WOD_TIME
+    if Time.zone.now.hour >= NEW_WOD_HOUR
       WodPost.tomorrow
     else
       WodPost.today

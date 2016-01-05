@@ -9,7 +9,7 @@ ActiveAdmin.register WodPost do
         f.input :title
       end
       f.input :slug
-      f.input :effective_date, as: :date_picker, input_html: {class: 'activeadmin-datepicker', style: 'width: 150px'}
+      f.input :effective_date, as: :date_picker, input_html: {class: 'activeadmin-datepicker', style: 'width: 150px'}, hint: t('activerecord.attributes.wod_post.effective_date_hint', day: WodPost::NEW_WOD_DAY, hour: WodPost::NEW_WOD_HOUR)
       f.input :content, input_html: {role: 'admin-content-editor'}
       # li do
       #   f.textarea :content, role: 'admin-content-editor', class: 'admin-content-editor'

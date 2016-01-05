@@ -109,7 +109,7 @@ gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
 # gem 'meta-tags', :require=>'meta_tags'
 
 # Truncation
-# gem "html_truncator", "~>0.2"
+gem "html_truncator", "~>0.2"
 # gem "hpricot", ">= 0.8.6"
 
 # Performance

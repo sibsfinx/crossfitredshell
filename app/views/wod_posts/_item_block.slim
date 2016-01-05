@@ -5,22 +5,24 @@
   .col-md-6
     / = link_to wod_post_path(item), class: 'text-size-large content-block-sm' do
     / .text-size-large.content-block-sm
-    p.content-block-sm
+    .content-block-sm
       strong= item.title
-    p.content-block-sm
-      = item.content.html_safe
+    .content-block-sm
+      - if short
+        = HTML_Truncator.truncate(item.content, 70).html_safe
+      - else
+        = item.content.html_safe
 
 .row
   .col-md-9.col-md-offset-3
-    - if show_more_link
+    - if short
       .content-block
-        = link_to wod_post_path(item) do
-          | Подробнее
+        = link_to wod_post_path(item), class: 'btn btn-red--outline' do
+          | Посмотреть полностью
           | &nbsp;&rarr;
-    - if show_socials
+    - else
       p.content-block-sm
         = render 'wod_posts/share', item: item
-    - if show_comments
       p.content-block-sm
         small
           = link_to "#{wod_post_path(item)}#disqus_thread" do

@@ -14,7 +14,7 @@
   .welcome-content-block
     .container
       - current_items.each do |item|
-        = render 'wod_posts/item_block', item: item, show_comments: false, show_socials: false, show_more_link: true
+        = render 'wod_posts/item_block', item: item, short: true
 
 .welcome-content-block.welcome-content-block--dark
   .container

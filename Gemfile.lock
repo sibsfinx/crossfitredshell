@@ -177,6 +177,8 @@ GEM
       haml (>= 4.0.0.rc.1)
       hpricot (~> 0.8.6)
       ruby_parser (~> 3.1.1)
+    html_truncator (0.4.1)
+      nokogiri (~> 1.5)
     i18n (0.7.0)
     inherited_resources (1.6.0)
       actionpack (>= 3.2, < 5)
@@ -403,6 +405,7 @@ DEPENDENCIES
   devise
   friendly_id (~> 5.1.0)
   haml-rails
+  html_truncator (~> 0.2)
   jquery-rails
   jquery-turbolinks
   kaminari

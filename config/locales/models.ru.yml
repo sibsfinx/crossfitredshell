@@ -22,6 +22,7 @@ ru:
         title: Название тренировки
         default_title: Тренировка дня
         effective_date: Дата тренировки
+        effective_date_hint: Тренировка появится на сайте за %{day} день в %{hour} ч
         content: Описание
       section:
         title: Название
