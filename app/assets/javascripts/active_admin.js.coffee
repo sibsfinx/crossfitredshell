@@ -15,6 +15,11 @@ $ ->
     selector: '[role*=admin-content-editor]'
     #plugins: "uploadimage"
     #uploadimage_default_img_class: "content-editor-image"
+    #add paste plugin
+    plugins: 'paste'
+    paste_text_sticky: true
+    oninit: (ed) ->
+      ed.pasteAsPlainText = true
 
   $('@select2').select2
     width: 'resolve'
