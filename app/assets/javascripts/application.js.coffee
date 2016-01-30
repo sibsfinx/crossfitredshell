@@ -4,6 +4,7 @@
 #= require lodash
 #= require FitText.js/jquery.fittext
 #= require jquery.role/lib/jquery.role
+#= require bootstrap-sass-official/assets/javascripts/bootstrap
 #= require photoswipe/dist/photoswipe
 #= require photoswipe/dist/photoswipe-ui-default
 #= require lead_form

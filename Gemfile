@@ -16,6 +16,7 @@ gem 'settingslogic'
 
 # Authentication & Authorisation
 gem 'devise'
+#gem 'devise-i18n'
 # gem 'switch_user'
 # gem "pundit"
 

@@ -1,7 +1,7 @@
 # https://gist.github.com/dip00dip/1146488
 # Русский перевод для https://github.com/plataformatec/devise/tree/v1.4.2
 # Другие переводы на https://github.com/plataformatec/devise/wiki/I18n
- 
+
 ru:
   errors:
     messages:
@@ -14,7 +14,7 @@ ru:
         few: "%{resource}: сохранение не удалось из-за %{count} ошибок"
         many: "%{resource}: сохранение не удалось из-за %{count} ошибок"
         other: "%{resource}: сохранение не удалось из-за %{count} ошибки"
- 
+
   devise:
     failure:
       already_authenticated: "Вы уже вошли в систему."
@@ -28,7 +28,34 @@ ru:
     sessions:
       signed_in: "Приветствуем!"
       signed_out: "До свидания!"
+      new:
+        sign_in: Войти
+        sign_in_with: Войти с
+        authorization: Войти в систему
+        sending: Вход в систему
+        enter_email: Введите email
+        enter_password: Введите пароль
+        remember_me: Запомнить меня
+      destroy:
+        sign_out: Выйти
+      links:
+        forgot_password: Забыли пароль?
+        not_registration_instruction: Не пришла инструкция
+        not_unlock_instruction: Не получили инструкцию по разблокировке
+        not_registration_description: |
+          Бывает и такое.
+          Введите электронную почту
+          и мы заново отправим вам
+          инструкцию для подтверждения
+          регистрации
+      email_sending: Отправка письма
+      unlocks:
+        resend_instructions: Отправить инструкции по разблокировке еще раз
+
     passwords:
+      new:
+        send: 'Восстановить пароль'
+        forgot_password: 'Восстановление пароля'
       send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по восстановлению вашего пароля."
       updated: "Ваш пароль изменён. Теперь вы вошли в систему."
       send_paranoid_instructions: "Если ваш адрес e-mail есть в нашей базе данных, то в течение нескольких минут вы получите письмо с инструкциями по восстановлению вашего пароля."
@@ -41,6 +68,25 @@ ru:
       inactive_signed_up: "Добро пожаловать! Вы успешно зарегистрировались. Но пока вы не можете войти в систему, т.к. ваша учётная запись %{reason}."
       updated: "Ваша учётная запись изменена."
       destroyed: "До свидания! Ваша учётная запись удалена. Надеемся снова увидеть вас."
+      edit:
+        your_name: Ваше имя
+        last_name: Фамилия
+        password: Пароль
+        phone: Номер телефона
+        sms_confirmation: Код подтверждения
+        community_title: Название вашей организации
+        password_confirmation: Подтверждение пароля
+        edit_password: Редактировать пароль/email
+        password_again: Пароль еще раз
+        for_reset: Для смены пароля
+        for_reset_email: Для смены эл. почты
+      new:
+        sign_up: Зарегистрироваться
+        sending: Регистрация
+      creating: Создание
+      instructions:
+        not_recieved_part1: Не получили инструкцию
+        not_recieved_part2: по подтверждению регистрации?
     unlocks:
       send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по разблокировке вашей учётной записи."
       unlocked: "Ваша учётная запись разблокирована. Теперь вы вошли в систему."

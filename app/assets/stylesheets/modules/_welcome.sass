@@ -89,6 +89,34 @@ $welcome-logo-height-xs: $welcome-logo-height/1.5
   height: auto
   max-width: 100%
 
+
+%welcome-navbar__nav-item
+  display: inline-block
+  padding: 5px 0px
+  margin: 0 10px
+  color: rgba(#fff, 0.8)
+  font:
+    size: $font-size-base*0.85
+    weight: 200
+
+.welcome-navbar__nav-item
+  @extend %welcome-navbar__nav-item
+
+%welcome-navbar__nav-item-link
+  border-bottom: 1px solid rgba(#fff, 0.5)
+  transition: border 0.2s ease
+  &, &:focus
+    color: #fff
+    background: none
+  &:hover
+    text-decoration: none
+    color: #fff
+    border-bottom: 1px solid $c-red-light
+    background: none
+
+.welcome-navbar__nav-item-link
+  @extend %welcome-navbar__nav-item-link
+
 .welcome-navbar__nav
   padding-top: $grid-gutter-width/2
   @media screen and (min-width: $screen-lg-min)
@@ -96,21 +124,17 @@ $welcome-logo-height-xs: $welcome-logo-height/1.5
   li
     display: inline-block
     a
-      display: inline-block
-      padding: 5px 0px
-      margin: 0 10px
-      font:
-        size: $font-size-base*0.85
-        weight: 200
-      border-bottom: 1px solid rgba(#fff, 0.5)
-      &, &:focus
-        color: #fff
-        background: none
-      &:hover
-        text-decoration: none
-        color: #fff
-        border-bottom: 1px solid $c-red-light
-        background: none
+      @extend %welcome-navbar__nav-item
+      @extend %welcome-navbar__nav-item-link
+      &.welcome-navbar__nav-item-btn
+        padding:
+          left: 8px
+          right: 8px
+        border-radius: $border-radius-base
+        &, &:focus
+          border: 1px solid rgba(#fff, 0.3)
+        &:hover, &:focus
+          border: 1px solid $c-red-light
     &.active
       & > a
         &, &:hover
@@ -118,6 +142,21 @@ $welcome-logo-height-xs: $welcome-logo-height/1.5
           color: #fff
           border-bottom: 1px solid $c-red-light
           background: none
+  .open
+    & > a
+      &, &:hover, &:focus
+        background: none
+    .dropdown-menu
+      background-color: rgba(#000, 0.9)
+      border: 1px solid rgba(#fff, 0.1)
+      box-shadow: none
+      & > li
+        & > a
+          &, &:hover, &:focus
+            border: none
+      &.dropdown-menu--bare
+        background: none
+        border: none
 
 .welcome-gallery__blocks-list
   width: 100%
@@ -136,3 +175,8 @@ $welcome-logo-height-xs: $welcome-logo-height/1.5
   display: inline-block
   max-width: 100%
 
+.landing__flash-container
+  background: #000
+  .alert
+    margin: 0
+    border-radius: 0

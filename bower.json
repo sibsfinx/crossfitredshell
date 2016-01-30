@@ -24,7 +24,8 @@
     "photoswipe": "~4.1.0",
     "rrssb": "~1.9.2",
     "select2": "3.5.2",
-    "webfontloader": "git@github.com:typekit/webfontloader.git#~1.6.6"
+    "webfontloader": "git@github.com:typekit/webfontloader.git#~1.6.6",
+    "font-awesome": "~4.5.0"
   },
   "devDependencies": {
     "compass-mixins": "~1.0.2"

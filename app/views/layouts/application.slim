@@ -4,6 +4,7 @@ html
     = render 'layouts/head'
   body class = "#{controller_name} #{action_name}"
     = render 'layouts/navbar'
+    = render 'layouts/messages'
     == yield
     = render 'layouts/gallery'
     = render 'layouts/analytics'
