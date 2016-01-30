@@ -1,7 +1,8 @@
 class WodPostsController < ApplicationController
   def index
     posts = WodPost.actual_list
-    render locals: {collection: posts}
+    items = posts.collect{|p| {item: p, comments_count: p.comment_threads.count}}
+    render locals: {collection: items}
   end
 
   def show

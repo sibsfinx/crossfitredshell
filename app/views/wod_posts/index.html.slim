@@ -1,6 +1,6 @@
 .container
   .content-block
 .container
-  - collection.each do |item|
-    = render 'wod_posts/item_block', item: item, short: false
+  - collection.each do |collection_item|
+    = render 'wod_posts/item_block', item: collection_item[:item], comments_count: collection_item[:comments_count], short: false
     hr.content-block-lg
