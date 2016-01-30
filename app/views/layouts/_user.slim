@@ -1,7 +1,7 @@
 - if current_user.present?
   ul.nav.welcome-navbar__nav
     li.dropdown
-      a(data-toggle="dropdown" href="")
+      a.welcome-navbar__nav-item-btn(data-toggle="dropdown" href="")
         i.fa.fa-user
         | &nbsp;
         = current_user.to_s

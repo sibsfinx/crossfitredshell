@@ -6,6 +6,7 @@ class WodPostsController < ApplicationController
 
   def show
     item = WodPost.friendly.find(params[:id])
+    commontator_thread_show(item)
     render locals: {item: item}
   end
 end

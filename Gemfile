@@ -20,6 +20,8 @@ gem 'devise'
 # gem 'switch_user'
 # gem "pundit"
 
+gem 'commontator', '~> 4.11.1'
+
 # Models
 # Validations
 # gem 'validates'

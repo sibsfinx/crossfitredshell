@@ -14,4 +14,6 @@
   hr.content-block
   = render 'wod_posts/share', item: item
   hr.content-block
-  = render 'wod_posts/disqus', page_url: wod_post_url(item), page_identifier: "#{item.class.name.downcase}-#{item.id}"
+  //= render 'wod_posts/disqus', page_url: wod_post_url(item), page_identifier: "#{item.class.name.downcase}-#{item.id}"
+  .content-block(role="page-comments")
+    = commontator_thread(item)

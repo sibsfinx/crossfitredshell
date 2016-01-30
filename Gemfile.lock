@@ -140,6 +140,9 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     colorize (0.7.7)
+    commontator (4.11.1)
+      jquery-rails
+      rails (>= 3.1)
     daemons (1.2.3)
     debug_inspector (0.0.2)
     devise (3.5.4)
@@ -402,6 +405,7 @@ DEPENDENCIES
   cells
   cells-haml!
   coffee-rails (~> 4.1.0)
+  commontator (~> 4.11.1)
   devise
   friendly_id (~> 5.1.0)
   haml-rails
