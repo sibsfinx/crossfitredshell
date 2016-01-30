@@ -35,3 +35,7 @@ ru:
         content: Описание
         description: Краткое описание для списка
         position: Номер в списке
+      comment:
+        body: Текст комментария
+        user: Автор
+        added: Комментарий добавлен

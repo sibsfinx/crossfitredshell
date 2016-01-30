@@ -14,4 +14,30 @@
   hr.content-block
   = render 'wod_posts/share', item: item
   hr.content-block
-  = render 'wod_posts/disqus', page_url: wod_post_url(item), page_identifier: "#{item.class.name.downcase}-#{item.id}"
+  //= render 'wod_posts/disqus', page_url: wod_post_url(item), page_identifier: "#{item.class.name.downcase}-#{item.id}"
+  .content-block-lg
+    .content-block
+      .content-block.text-muted.text-size-large
+        | Комментарии
+      - item.comment_threads.each do |t|
+        p
+          strong= t.user
+          | &nbsp;&nbsp;
+          small.text-muted= l t.created_at, format: :created_at
+        p
+          = t.body
+        hr
+    - if current_user.present?
+      .content-block-lg
+        .row
+          .col-md-6
+            .content-block-sm.text-muted.text-size-large
+              | Оставьте комментарий
+            = render 'wod_posts/comments/form', item: item, comment: comment
+    - else
+      .content-block-lg.text-muted
+        = link_to t('devise.sessions.new.sign_in'), new_user_session_path
+        |  или
+        | &nbsp;
+        = link_to t('devise.registrations.new.sign_up'), new_user_registration_path
+        | , чтобы комментировать

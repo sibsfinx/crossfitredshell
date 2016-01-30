@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   root 'landing#index'
 
   resources :leads, only: [:create]
-  resources :wod_posts, only: [:index, :show], path: '/wod'
+  resources :wod_posts, only: [:index, :show], path: '/wod' do
+    resources :comments, controller: 'wod_post_comments'
+  end
   resources :sections, only: [:index, :show]
   resources :coaches, only: [:index, :show]
 

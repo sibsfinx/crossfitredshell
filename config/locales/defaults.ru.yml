@@ -262,6 +262,7 @@ ru:
       long: ! '%d %B %Y, %H:%M'
       short: ! '%d %B, %H:%M'
       day: ! '%d %B %Y'
+      created_at: '%d %B %Y в %H:%M'
     pm: вечера
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:

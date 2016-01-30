@@ -25,9 +25,10 @@ gem 'devise'
 # gem 'validates'
 # gem 'phony_rails', :git => 'git://github.com/joost/phony_rails.git'
 
+gem 'acts_as_commentable_with_threading'
+
 # States
 # gem 'statesman'
-
 
 # Form Objects
 # gem 'model_pretender', :git => 'git://github.com/TinkerDev/model_pretender.git'
