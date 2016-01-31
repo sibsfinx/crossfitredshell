@@ -1,0 +1,19 @@
+.navbar.navbar-default
+  .container
+    ul.nav.navbar-nav
+      li
+        = link_to posts_path do
+          | &larr;&nbsp; Все новости
+.container
+  .row
+    .col-md-8.col-md-offset-2
+      .text-size-larger.content-block-sm
+        strong= item.title
+      .content-block-sm.text-muted
+        = l item.publicated_at, format: :day
+      hr.content-block-sm
+      p
+        = item.content.html_safe
+      hr.content-block
+      = render 'posts/share', item: item
+      hr.content-block

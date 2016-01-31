@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :wod_posts, only: [:index, :show], path: '/wod' do
     resources :comments, controller: 'wod_post_comments'
   end
+  resources :posts, only: [:index, :show]
   resources :sections, only: [:index, :show]
   resources :coaches, only: [:index, :show]
 

@@ -1,0 +1,27 @@
+.row
+  .col-md-3
+    .wod-list__item-date
+      = l item.publicated_at, format: :day
+  .col-md-6
+    / = link_to post_path(item), class: 'text-size-large content-block-sm' do
+    / .text-size-large.content-block-sm
+    .content-block-sm
+      = link_to post_path(item) do
+        strong= item.title
+    .content-block-sm
+      - if short
+        = HTML_Truncator.truncate(item.content, 70).html_safe
+      - else
+        = item.content.html_safe
+
+.row
+  .col-md-9.col-md-offset-3
+    - if short
+      .content-block
+        = link_to post_path(item), class: 'btn btn-red--outline' do
+          | Читать дальше
+          | &nbsp;&rarr;
+    - else
+      p.content-block-sm
+        = render 'posts/share', item: item
+
