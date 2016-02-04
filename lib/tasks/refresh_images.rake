@@ -17,6 +17,12 @@ namespace :carrierwave do
       end
     end
 
+    Post.find_each do |m|
+      if m.image.present?
+        m.image.recreate_versions!
+      end
+    end
+
   end
 end
 

@@ -1,3 +1,12 @@
+- content_for :title do
+  = page_title item.title
+- if item.meta_tags.present?
+  - content_for :meta_keywords do
+    = item.meta_tags.split(',').join(', ')
+- content_for :meta_description do
+  = item.meta_description
+
+
 .navbar.navbar-default
   .container
     ul.nav.navbar-nav
@@ -7,11 +16,15 @@
 .container
   .row
     .col-md-8.col-md-offset-2
-      .text-size-larger.content-block-sm
-        strong= item.title
-      .content-block-sm.text-muted
-        = l item.publicated_at, format: :day
-      hr.content-block-sm
+      .content-block
+        .text-size-larger.content-block-sm
+          strong= item.title
+        .text-muted
+          = l item.publicated_at, format: :day
+      hr.content-block
+      .content-block
+        .wod-list__item-image-block
+          = image_tag item.image.large.url, class: 'wod-list__item-image'
       p
         = item.content.html_safe
       hr.content-block

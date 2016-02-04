@@ -29,6 +29,10 @@ if defined? CarrierWave
     # def scale(width, height)
     #   # do something
     # end
+    version :large do
+      process :resize_to_fit => [1280, 800]
+    end
+
     version :standard do
       process :resize_to_fit => [800, 600]
     end
