@@ -6,6 +6,9 @@ ru:
       section: Направление
       coach: Тренер
       post: Новость
+      admin_user: Администратор
+      wod_post_comment: Комментарий WOD
+      user: Пользователь
     attributes:
       lead:
         phone: Номер телефона

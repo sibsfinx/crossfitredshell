@@ -26,12 +26,6 @@ ActiveAdmin.register Post do
     column :title
     column :publicated_at
     column :published
-    column :pinned
-    column :departments do |post|
-      post.departments.collect{|d| d.title}.join(', ') if post.departments.present?
-    end
-    column :language
-    column :contest
     #column :content do |post|
     #  #truncate_html post.content.html_safe
     #  post.content.html_safe
