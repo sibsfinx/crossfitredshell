@@ -1,0 +1,4 @@
+class PostUploader < ApplicationUploader
+
+end
+

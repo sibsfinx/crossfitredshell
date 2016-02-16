@@ -1,0 +1,6 @@
+.container
+  .content-block
+.container
+  - collection.each do |collection_item|
+    = render 'posts/item_block', item: collection_item, short: false
+    hr.content-block-lg

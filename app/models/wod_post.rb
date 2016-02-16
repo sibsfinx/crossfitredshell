@@ -5,6 +5,8 @@ class WodPost < ActiveRecord::Base
   NEW_WOD_HOUR = 19
   NEW_WOD_DAY = 1
 
+  acts_as_commentable
+
   validates :title, :content, :effective_date, presence: true
   friendly_id :wod_slug, use: [:slugged, :finders, :history]
 

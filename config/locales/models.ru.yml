@@ -5,6 +5,10 @@ ru:
       wod_post: Тренировка дня
       section: Направление
       coach: Тренер
+      post: Новость
+      admin_user: Администратор
+      wod_post_comment: Комментарий WOD
+      user: Пользователь
     attributes:
       lead:
         phone: Номер телефона
@@ -24,6 +28,14 @@ ru:
         effective_date: Дата тренировки
         effective_date_hint: Тренировка появится на сайте за %{day} день в %{hour} ч
         content: Описание
+      post:
+        title: Название
+        publicated_at: Дата публикации
+        publicated_at_hint: Новость будет видна на сайте, начиная с даты публикации
+        published: Опубликовано
+        published_hint: Можно скрыть на сайте независимо от даты публикации
+        annouce: Краткое описание (в ленте новостей)
+        announce_hint: Генерируется автоматически, если не заполнено
       section:
         title: Название
         content: Описание
@@ -35,3 +47,7 @@ ru:
         content: Описание
         description: Краткое описание для списка
         position: Номер в списке
+      comment:
+        body: Текст комментария
+        user: Автор
+        added: Комментарий добавлен

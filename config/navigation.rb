@@ -15,6 +15,8 @@ SimpleNavigation::Configuration.run do |navigation|
 
     primary.item :wod, 'Тренировка дня / WOD', wod_posts_path
 
+    primary.item :posts, 'Новости', posts_path
+
     # you can turn off auto highlighting for a specific level
     primary.auto_highlight = true
   end

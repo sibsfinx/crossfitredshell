@@ -25,12 +25,20 @@ ru:
       defaults:
         name: Название
         title: Название
+        phone: Номер телефона
+        name: Имя и фамилия
+        email: Email
+        password: Пароль
+        password_confirmation: Подтвердите пароль
+        remember_me: Запомнить меня
     placeholders:
       defaults:
         title: Название
         phone: Номер телефона
-        name: Ваше имя
+        name: Имя и фамилия
         email: Email
+        password: Пароль
+        password_confirmation: Подтвердите пароль
     hints:
       defaults:
         price: руб.

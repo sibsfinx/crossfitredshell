@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users, :controllers => { :registrations => "users/registrations" }
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
@@ -10,7 +11,10 @@ Rails.application.routes.draw do
   root 'landing#index'
 
   resources :leads, only: [:create]
-  resources :wod_posts, only: [:index, :show], path: '/wod'
+  resources :wod_posts, only: [:index, :show], path: '/wod' do
+    resources :comments, controller: 'wod_post_comments'
+  end
+  resources :posts, only: [:index, :show]
   resources :sections, only: [:index, :show]
   resources :coaches, only: [:index, :show]
 

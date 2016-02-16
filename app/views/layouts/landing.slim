@@ -3,6 +3,8 @@ html
   head
     = render 'layouts/head'
   body class = "#{controller_name} #{action_name}"
+    .landing__flash-container
+      = render 'layouts/messages'
     == yield
     = render 'layouts/gallery'
     = render 'layouts/analytics'

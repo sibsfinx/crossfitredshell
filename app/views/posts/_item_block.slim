@@ -1,0 +1,31 @@
+.row
+  .col-md-3
+    .wod-list__item-date
+      .wod-list__item-image-block
+        = image_tag item.image.standard.url, class: 'wod-list__item-image'
+  .col-md-9
+    .row
+      .col-md-8
+        / = link_to post_path(item), class: 'text-size-large content-block-sm' do
+        / .text-size-large.content-block-sm
+        .content-block-sm
+          small.text-muted= l item.publicated_at, format: :day
+        .content-block-sm.text-size-large
+          = link_to post_path(item) do
+            strong= item.title
+        .content-block-sm
+          - if short
+            = HTML_Truncator.truncate(item.content, 70).html_safe
+          - else
+            = item.content.html_safe
+
+    .content-block-sm
+      - if short
+        .content-block
+          = link_to post_path(item), class: 'btn btn-red--outline' do
+            | Читать дальше
+            | &nbsp;&rarr;
+      - else
+        p.content-block-sm
+          = render 'posts/share', item: item
+

@@ -3,7 +3,6 @@ title= content_for?(:title) ? yield(:title) : Settings.app.title
 //meta content="#{content_for?(:description) ? yield(:description) : Settings.app.title}" name="description"
 
 meta name ="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
-title =content_for?(:title) ? yield(:title) : Settings.app.meta_title
 meta content="#{content_for?(:meta_description) ? yield(:meta_description) : Settings.app.meta_description}" name="description"
 meta content="#{content_for?(:meta_keywords) ? yield(:meta_keywords) : Settings.app.meta_keywords.presence}" name="Keywords"
 
