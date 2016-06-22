@@ -31,7 +31,7 @@ defaults: &defaults
       port:    587
       email:   'mailer@crossfitredshell.com'
       user_name: 'mailer@crossfitredshell.com'
-      password: 'RedshellMailer3000'
+      password: ''
       authentication: plain
       enable_starttls_auto: true
 
